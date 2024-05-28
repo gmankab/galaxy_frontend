@@ -24,3 +24,4 @@ yarn run vite
 - `src/App.tsx` - основная логика и тп.
 - `src/styles/index.css` - css тема всякая.
 - `src/main.tsx` - импорты всякие.
+- `src/assets/*` - графика.
