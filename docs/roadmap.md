@@ -11,9 +11,12 @@
 ### telegram bot
 - [ ] init telegram bot, use typescript
 - [ ] use one of tg libs specified here - https://t.me/c/1856446403/3687
+- [ ] hello message
+- [ ] autests for hello message
 - [ ] connect fontend to telegram bot
 
 ### backend roadmap
 - [ ] init backend, use typescript
-- [ ] save user's score in database by his telegram id
+- [ ] save user's couns count in database by his telegram id
+- [ ] autotests for method that gets click from user
 
