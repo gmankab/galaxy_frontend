@@ -1,6 +1,7 @@
 __MACOSX
 .DS_Store
 node_modules
+public
 dist
 
 
