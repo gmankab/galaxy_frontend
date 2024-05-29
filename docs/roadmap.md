@@ -12,7 +12,7 @@
 - [ ] init telegram bot, use typescript
 - [ ] use one of tg libs specified here - https://t.me/c/1856446403/3687
 - [ ] hello message
-- [ ] autests for hello message
+- [ ] autoests for hello message
 - [ ] connect fontend to telegram bot
 
 ### backend roadmap
