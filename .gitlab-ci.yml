@@ -1,0 +1,23 @@
+image: node:latest
+stages:
+  - build
+  - pages
+build:
+  stage: build
+  script:
+    - cd web
+    - yarn install
+    - yarn build
+  artifacts:
+    paths:
+      - web/dist
+pages:
+  stage: pages
+  script:
+    - echo 'deploying'
+  publish: web/dist
+  artifacts:
+    paths:
+      - web/dist
+
+
