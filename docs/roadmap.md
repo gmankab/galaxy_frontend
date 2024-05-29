@@ -4,6 +4,7 @@
 - [x] 34587e92 add coins counter in top left corner
 - [x] bc7f1273 gitlab ci auto deploy on gitlab pages
 - [ ] fix shadow https://gitlab.com/gmanka/galaxy_x_chain/-/issues/1
+- [ ] remove blue border https://gitlab.com/gmanka/galaxy_x_chain/-/issues/2
 - [ ] coins couner design - https://t.me/c/2219575184/60
 - [ ] connect to telegram bot
 - [ ] sent clicking requests to backend with user's telegram id
