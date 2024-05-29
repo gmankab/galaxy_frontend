@@ -10,3 +10,11 @@
 - commits should be as small as possible
 - 10 little commits are better then 1 big commit
 
+
+## important files
+
+- `src/App.tsx` - logic
+- `src/styles/index.css` - css theming
+- `src/main.tsx` - imports
+- `src/assets/*` - assets
+
