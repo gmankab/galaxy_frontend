@@ -1,6 +1,19 @@
-- [x] background rendered on page
-- [x] planet rendered in the center
-- [x] remove black borders around the background
-- [x] add counter in top left corner
-- [x] counter must increase when clicking on the planet
+### frontend roadmap
+- [x] 07723351 init frontend, background, planet
+- [x] 5d79617c remove black borders
+- [x] 34587e92 add coins counter in top left corner
+- [x] bc7f1273 gitlab ci auto deploy on gitlab pages
+- [ ] fix shadow https://gitlab.com/gmanka/galaxy_x_chain/-/issues/1
+- [ ] coins couner design - https://t.me/c/2219575184/60
+- [ ] connect to telegram bot
+- [ ] sent clicking requests to backend with user's telegram id
+
+### telegram bot
+- [ ] init telegram bot, use typescript
+- [ ] use one of tg libs specified here - https://t.me/c/1856446403/3687
+- [ ] connect fontend to telegram bot
+
+### backend roadmap
+- [ ] init backend, use typescript
+- [ ] save user's score in database by his telegram id
 
