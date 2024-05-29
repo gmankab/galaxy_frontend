@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/galaxy_test/',
+  base: '/galaxy_x_chain/',
 })
 
