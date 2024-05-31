@@ -5,5 +5,4 @@
 - [contributing.md](docs/contributing.md)
 - [how_to_run.md](docs/how_to_run.md)
 
-on each commit app automatically deploys on https://gmanka.gitlab.io/galaxy_x_chain
-
+on each commit app automatically deploys on https://gmanka.gitlab.io/galaxy_frontend
