@@ -7,11 +7,11 @@ import OrientationWarning from './OrientationWarning';
 const App: React.FC = () => {
   const [count, setCount] = useState(0);
   const horizontalMode = 1; // Установите 0 для вертикального режима, 1 для горизонтального
-  const isPortrait = useOrientation(horizontalMode);
+  const isPortrait = useOrientation(horizontalMode); // isPortrait - это boolean
 
   return (
     <div id="app">
-      {!isPortrait && horizontalMode === 0 && <OrientationWarning />}
+      {horizontalMode === 0 && !isPortrait && <OrientationWarning />} {/* Убедитесь, что isPortrait - boolean */}
       <div className="counter">{count}</div>
       <div
         className="planet"
