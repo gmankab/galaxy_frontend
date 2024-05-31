@@ -10,20 +10,19 @@ html, body {
 }
 
 #app {
-  height: 100vh;
-  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: url('/src/assets/background/purple.svg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 .counter {
@@ -44,4 +43,30 @@ html, body {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  position: fixed;
+  -webkit-tap-highlight-color: transparent; /* Убираем выделение на мобильных устройствах */
+}
+
+.orientation-warning {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8); /* Темный фон */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  text-align: center;
+  pointer-events: all; /* Чтобы блокировать взаимодействие с основным контентом */
+}
+
+.orientation-warning div {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  width: 80%;
+  max-width: 300px;
 }
