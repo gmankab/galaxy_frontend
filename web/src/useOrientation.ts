@@ -1,11 +1,14 @@
-
 import { useEffect, useState } from 'react';
 
-export const useOrientation = () => {
+export const useOrientation = (horizontalMode: number) => {
   const [isPortrait, setIsPortrait] = useState(window.innerHeight > window.innerWidth);
 
   const checkOrientation = () => {
-    setIsPortrait(window.innerHeight > window.innerWidth);
+    if (horizontalMode === 0) {
+      setIsPortrait(window.innerHeight > window.innerWidth);
+    } else {
+      setIsPortrait(true); // Если горизонтальный режим включен, всегда считаем, что портретный режим
+    }
   };
 
   useEffect(() => {
@@ -15,7 +18,7 @@ export const useOrientation = () => {
     return () => {
       window.removeEventListener('resize', checkOrientation);
     };
-  }, []);
+  }, [horizontalMode]);
 
   return isPortrait;
 };
