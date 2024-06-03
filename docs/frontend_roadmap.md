@@ -7,6 +7,7 @@
 - [x] 53f4e119 fix shadow
 - [x] 1db09480 remove blue border
 - [x] 89c27301 getting userid of telegram user
+- [x] ee65111c horizontal mode lock 
 - [ ] coins couner design - https://t.me/c/2219575184/60
 - [ ] settings button should open settings
 - [ ] settings: connect ton walet or @cryptobot to the app
