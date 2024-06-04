@@ -56,10 +56,10 @@ const App: React.FC = () => {
 
   const fetchCoins = async (userId: number) => {
     try {
-      const response = await fetch(`http://localhost:8000/get/${userId}`, {
+      const response = await fetch(`http://localhost:8000/coin/get?tg_id=${userId}`, {
         method: 'GET',
         headers: {
-          'Content-Type': 'application/json'
+          'accept': 'application/json'
         },
         mode: 'cors',
       });
@@ -67,26 +67,34 @@ const App: React.FC = () => {
         throw new Error('Network response was not ok');
       }
       const data = await response.json();
-      const coin = data.coin;
+      const coin = data.coins;
       setCount(coin);
     } catch (error) {
       console.error('Failed to fetch coins:', error);
     }
   };
 
-  const saveCoins = async (userId: number, clicks: number) => {
-    try {
-      const response = await fetch(`http://localhost:8000/save/${userId}/${clicks}`, {
-        method: 'GET',
-      });
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      console.log(`Successfully saved ${clicks} clicks for user ${userId}`);
-    } catch (error) {
-      console.error('Failed to save clicks:', error);
+const saveCoins = async (userId: number, clicks: number) => {
+  try {
+    const response = await fetch(`http://localhost:8000/coin/add`, {
+      method: 'POST',
+      headers: {
+        'accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        "tg_id": userId,
+        "amount": clicks
+      })
+    });
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
     }
-  };
+    console.log(`Successfully saved ${clicks} clicks for user ${userId}`);
+  } catch (error) {
+    console.error('Failed to save clicks:', error);
+  }
+};
 
   const handlePlanetClick = () => {
     setCount(count + 1);
