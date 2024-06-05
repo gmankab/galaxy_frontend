@@ -9,7 +9,7 @@
 - [x] 89c27301 getting userid of telegram user
 - [x] ee65111c horizontal mode lock
 - [x] 794fe115 sent clicking requests to fastapi backend with user's telegram id
-- [ ] coins couner design - https://t.me/c/2219575184/60
+- [x] f570fab2 coins couner design - https://t.me/c/2219575184/60
 - [ ] settings button should open settings
 - [ ] settings: connect ton walet or @cryptobot to the app
 - [ ] settings: connect twitter
