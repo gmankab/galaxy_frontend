@@ -105,7 +105,9 @@ const saveCoins = async (userId: number, clicks: number) => {
     <div id="app">
       {horizontalMode === 0 && !isPortrait && <OrientationWarning />}
       <div className="user-id">User ID: {userId}</div>
-      <div className="counter">{count}</div>
+      <div className="counter-container">
+        <div className="counter">{count}</div>
+      </div>
       <div
         className="planet"
         onClick={handlePlanetClick}
