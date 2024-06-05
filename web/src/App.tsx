@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './styles/index.css';
 import planetImage from './assets/planet/green.svg';
-import menuButtonImage from './assets/menu_button.svg';
 import { useOrientation } from './useOrientation';
 import OrientationWarning from './OrientationWarning';
 
