@@ -47,22 +47,11 @@ html, body {
 
 .user-id {
   position: absolute;
-  top: 65px;
-  left: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 5px 10px;
-  border-radius: 5px;
+  top: 80px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */ 
   font-size: 20px;
   font-weight: bold;
   transition: transform 0.3s ease-in-out;
-}
-
-.user-id.hidden {
-  transform: translateX(-150%);
-}
-
-.user-id.visible {
-  transform: translateX(0);
 }
 
 .planet {
@@ -73,7 +62,7 @@ html, body {
   background-position: center;
   cursor: pointer;
   position: fixed;
-  -webkit-tap-highlight-color: transparent; /* Убираем выделение на мобильных устройствах */
+  -webkit-tap-highlight-color: transparent; /* Removing selection on mobile devices */
 }
 
 .orientation-warning {
@@ -82,14 +71,14 @@ html, body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.8); /* Темный фон */
+  background: rgba(0, 0, 0, 0.8); /* Dark background */
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
   text-align: center;
-  pointer-events: all; /* Чтобы блокировать взаимодействие с основным контентом */
+  pointer-events: all; /* To block interaction with main content */
 }
 
 .orientation-warning div {
@@ -104,13 +93,35 @@ html, body {
   position: absolute;
   top: 10px;
   left: 10px;
-  width: 50px;
-  height: 50px;
-  background-image: url('/src/assets/menu_button.svg');
+  width: 70px;
+  height: 70px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
   z-index: 1001; /* Ensure the button is above other elements */
+}
+
+.menu-button.hidden {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000; /* Ensure the menu is above other elements */
+  display: flex;
+  flex-direction: column;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-items: center;
+}
+
+.menu img {
+  width: 165px; /* Adjust as needed */
+  height: auto;
 }
 

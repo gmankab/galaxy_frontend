@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './styles/index.css';
 import planetImage from './assets/planet/green.svg';
+import menuButtonImage from './assets/menu_button.svg';
+import openedMenuImage from './assets/opened_menu.svg';
 import { useOrientation } from './useOrientation';
 import OrientationWarning from './OrientationWarning';
 
@@ -8,7 +10,7 @@ const App: React.FC = () => {
   const [count, setCount] = useState<number>(0);
   const [clicksInInterval, setClicksInInterval] = useState<number>(0);
   const [userId, setUserId] = useState<number | null>(null);
-  const [isUserIdVisible, setIsUserIdVisible] = useState<boolean>(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const horizontalMode: number = 1; // Set to 0 for vertical mode, 1 for horizontal
   const isPortrait: boolean = useOrientation(horizontalMode);
   const saveInterval = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -102,15 +104,24 @@ const saveCoins = async (userId: number, clicks: number) => {
     setClicksInInterval(clicksInInterval + 1);
   };
 
-  const toggleUserIdVisibility = () => {
-    setIsUserIdVisible(!isUserIdVisible);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
     <div id="app">
       {horizontalMode === 0 && !isPortrait && <OrientationWarning />}
-      <div className={`user-id ${isUserIdVisible ? 'visible' : 'hidden'}`}>User ID: {userId}</div>
-      <div className="menu-button" onClick={toggleUserIdVisibility}></div>
+      {isMenuOpen && (
+        <div className="menu">
+          <img src={openedMenuImage} alt="Opened Menu" />
+          <div className="user-id">User ID: {userId}</div>
+        </div>
+      )}
+	<div 
+	  className={`menu-button ${isMenuOpen ? 'hidden' : ''}`} 
+	  onClick={toggleMenu} 
+	  style={{ backgroundImage: `url(${menuButtonImage})` }}
+	></div> 
       <div className="counter-container">
         <div className="counter">{count}</div>
       </div>
