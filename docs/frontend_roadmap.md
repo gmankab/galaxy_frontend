@@ -10,6 +10,7 @@
 - [x] ee65111c horizontal mode lock
 - [x] 794fe115 sent clicking requests to fastapi backend with user's telegram id
 - [x] f570fab2 coins couner design - https://t.me/c/2219575184/60
+- [x] d2a0d6c6 add menu button
 - [ ] settings button should open settings
 - [ ] settings: connect ton walet or @cryptobot to the app
 - [ ] settings: connect twitter
