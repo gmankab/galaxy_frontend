@@ -43,6 +43,7 @@ html, body {
   color: white;
   font-size: 20px;
   font-weight: bold;
+  user-select: none;
 }
 
 .user-id {
@@ -140,10 +141,10 @@ html, body {
 
 .voice-toggle {
   position: absolute;
-  top: 20px;
+  top: 75px;
   left: 2px;
   width: 160px;
-  height: 160px;
+  height: 50px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -151,3 +152,28 @@ html, body {
   z-index: 1001; /* Ensure the button is above other elements */
 }
 
+.connect-twitter {
+  position: absolute;
+  top: 120px;
+  left: 2px;
+  width: 160px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 1001; /* Ensure the button is above other elements */
+}
+
+.connect-wallet {
+  position: absolute;
+  top: 165px;
+  left: 2px;
+  width: 160px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 1001; /* Ensure the button is above other elements */
+}

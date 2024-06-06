@@ -6,6 +6,8 @@ import openedMenuImage from './assets/opened_menu.svg';
 import shopButtonImage from './assets/shop_button.svg';
 import voiceOnImage from './assets/voice_on.svg';
 import voiceOffImage from './assets/voice_off.svg';
+import twitterButtonImage from './assets/connct_x.svg';
+import walletButtonImage from './assets/connect_wallet.svg';
 import { useOrientation } from './useOrientation';
 import OrientationWarning from './OrientationWarning';
 import api from './api'; // Импортируем нашу утилиту
@@ -109,6 +111,14 @@ const App: React.FC = () => {
             onClick={toggleVoice}
             style={{ backgroundImage: `url(${isVoiceOn ? voiceOnImage : voiceOffImage})` }}
           ></div>
+	  <div
+	    className="connect-twitter"
+	    style={{ backgroundImage: `url(${twitterButtonImage})` }}
+	    ></div>
+	  <div
+	    className="connect-wallet"
+	    style={{ backgroundImage: `url(${walletButtonImage})` }}
+	    ></div>
         </div>
       )}
       <div className="user-id">User ID: {userId}</div>
