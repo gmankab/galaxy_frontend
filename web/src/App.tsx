@@ -8,6 +8,8 @@ import voiceOnImage from './assets/voice_on.svg';
 import voiceOffImage from './assets/voice_off.svg';
 import twitterButtonImage from './assets/connct_x.svg';
 import walletButtonImage from './assets/connect_wallet.svg';
+import giftButtonImage from './assets/gift_button.svg';
+import clansButtonImage from './assets/clans_button.svg';
 import { useOrientation } from './useOrientation';
 import OrientationWarning from './OrientationWarning';
 import api from './api';
@@ -135,6 +137,14 @@ const App: React.FC = () => {
       <div 
         className="shop-button"
 	style={{ backgroundImage: `url(${shopButtonImage})` }}
+      ></div>
+      <div 
+        className="gift-button"
+	style={{ backgroundImage: `url(${giftButtonImage})` }}
+      ></div>
+      <div 
+        className="clans-button"
+	style={{ backgroundImage: `url(${clansButtonImage})` }}
       ></div>
       <div className="counter-container">
         <div className="counter">{count}</div>
