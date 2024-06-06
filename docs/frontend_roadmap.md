@@ -11,8 +11,8 @@
 - [x] d2a0d6c6 add menu button
 - [x] 9bbcdc68 add opened menu
 - [x] settings: button
-- [ ] set default backend url - paul.freemyip.com:8000/docs
-- [ ] load coins amount from backend on start
+- [x] 15b38c8f set default backend url - paul.freemyip.com:8000/docs
+- [x] 794fe115 load coins amount from backend on start
 - [ ] settings: enable/disable sound
 - [ ] animations: universe
 - [ ] animations: planet movement in the planet selection window
