@@ -122,36 +122,11 @@ html, body {
   z-index: 1001; /* Ensure the button is above other elements */
 }
 
-.shop-button {
-  position: absolute;
-  top: 10px;
-  left: 85px;
-  width: 70px;
-  height: 70px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-  z-index: 1001; /* Ensure the button is above other elements */
-}
-
-.gift-button {
-  position: absolute;
-  top: 10px;
-  left: 160px;
-  width: 70px;
-  height: 70px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-  z-index: 1001; /* Ensure the button is above other elements */
-}
-
+.shop-button,
+.gift-button,
 .clans-button {
   position: absolute;
   top: 10px;
-  left: 235px;
   width: 70px;
   height: 70px;
   background-size: contain;
@@ -159,6 +134,25 @@ html, body {
   background-position: center;
   cursor: pointer;
   z-index: 1001; /* Ensure the button is above other elements */
+  transition: transform 0.1s ease; /* Smooth transition for the scaling effect */
+}
+
+.shop-button {
+  left: 85px;
+}
+
+.gift-button {
+  left: 160px;
+}
+
+.clans-button {
+  left: 235px;
+}
+
+.shop-button:active,
+.gift-button:active,
+.clans-button:active {
+  transform: scale(0.9); /* Scale down the button when it is active (clicked) */
 }
 
 .menu-button.hidden {
@@ -184,41 +178,42 @@ html, body {
   height: auto;
 }
 
-.voice-toggle {
+
+.voice-toggle,
+.connect-twitter,
+.connect-wallet {
   position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 1001; /* Ensure the button is above other elements */
+  transition: transform 0.1s ease; /* Smooth transition for the scaling effect */
+}
+
+.voice-toggle {
   top: 75px;
   left: 2px;
   width: 160px;
   height: 50px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-  z-index: 1001; /* Ensure the button is above other elements */
 }
 
 .connect-twitter {
-  position: absolute;
   top: 120px;
   left: 2px;
   width: 160px;
   height: 50px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-  z-index: 1001; /* Ensure the button is above other elements */
 }
 
 .connect-wallet {
-  position: absolute;
   top: 165px;
   left: 2px;
   width: 160px;
   height: 50px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-  z-index: 1001; /* Ensure the button is above other elements */
+}
+
+.voice-toggle:active,
+.connect-twitter:active,
+.connect-wallet:active {
+  transform: scale(0.9); /* Scale down the button when it is active (clicked) */
 }
