@@ -20,6 +20,7 @@
 - [x] 53421a7c animations: clicking planet
 - [x] 3e0db323 clans button
 - [x] 3e0db323 gift button
+- [x] 5acbf580 animations: buttons
 - [ ] wallet/twitter tasks
 - [ ] animations: universe
 - [ ] animations: planet movement in the planet selection window
