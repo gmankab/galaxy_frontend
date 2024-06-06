@@ -14,12 +14,12 @@
 - [x] 15b38c8f set default backend url - paul.freemyip.com:8000/docs
 - [x] 794fe115 load coins amount from backend on start
 - [x] c04c3c09 rewritten on axios
+- [x] 75e0c742 shop: button
 - [ ] settings: enable/disable sound
 - [ ] animations: universe
 - [ ] animations: planet movement in the planet selection window
 - [ ] animations: clicking on the planet to mine resources
 - [ ] animations: flying ship around planet
-- [ ] shop: button
 - [ ] shop: purchase pop-up window
 - [ ] back button that opens planet choosing page
 - [ ] planet choosing
