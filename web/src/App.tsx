@@ -5,6 +5,7 @@ import menuButtonImage from './assets/menu_button.svg';
 import openedMenuImage from './assets/opened_menu.svg';
 import { useOrientation } from './useOrientation';
 import OrientationWarning from './OrientationWarning';
+import api from './api'; // Импортируем нашу утилиту
 
 const App: React.FC = () => {
   const [count, setCount] = useState<number>(0);
@@ -59,17 +60,8 @@ const App: React.FC = () => {
 
   const fetchCoins = async (userId: number) => {
     try {
-      const response = await fetch(`http://paul.freemyip.com:8000/coin/get?tg_id=${userId}`, {
-        method: 'GET',
-        headers: {
-          'accept': 'application/json'
-        },
-        mode: 'cors',
-      });
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      const data = await response.json();
+      const response = await api.get(`/coin/get?tg_id=${userId}`);
+      const data = response.data;
       const coin = data.coins;
       setCount(coin);
     } catch (error) {
@@ -77,27 +69,17 @@ const App: React.FC = () => {
     }
   };
 
-const saveCoins = async (userId: number, clicks: number) => {
-  try {
-    const response = await fetch(`http://paul.freemyip.com:8000/coin/add`, {
-      method: 'POST',
-      headers: {
-        'accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
+  const saveCoins = async (userId: number, clicks: number) => {
+    try {
+      const response = await api.post(`/coin/add`, {
         "tg_id": userId,
         "amount": clicks
-      })
-    });
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
+      });
+      console.log(`Successfully saved ${clicks} clicks for user ${userId}`);
+    } catch (error) {
+      console.error('Failed to save clicks:', error);
     }
-    console.log(`Successfully saved ${clicks} clicks for user ${userId}`);
-  } catch (error) {
-    console.error('Failed to save clicks:', error);
-  }
-};
+  };
 
   const handlePlanetClick = () => {
     setCount(count + 1);
@@ -117,11 +99,11 @@ const saveCoins = async (userId: number, clicks: number) => {
           <div className="user-id">User ID: {userId}</div>
         </div>
       )}
-	<div 
-	  className={`menu-button ${isMenuOpen ? 'hidden' : ''}`} 
-	  onClick={toggleMenu} 
-	  style={{ backgroundImage: `url(${menuButtonImage})` }}
-	></div> 
+      <div 
+        className={`menu-button ${isMenuOpen ? 'hidden' : ''}`} 
+        onClick={toggleMenu} 
+        style={{ backgroundImage: `url(${menuButtonImage})` }}
+      ></div> 
       <div className="counter-container">
         <div className="counter">{count}</div>
       </div>
