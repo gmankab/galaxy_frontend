@@ -71,7 +71,7 @@ const App: React.FC = () => {
 
   const saveCoins = async (userId: number, clicks: number) => {
     try {
-      const response = await api.post(`/coin/add`, {
+      await api.post(`/coin/add`, {
         "tg_id": userId,
         "amount": clicks
       });
