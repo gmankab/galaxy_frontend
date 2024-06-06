@@ -15,6 +15,9 @@
 - [x] c04c3c09 rewritten on axios
 - [x] 75e0c742 shop: button
 - [x] 25cb8b20 settings: enable/disable sound
+- [x] be4cdc19 twitter button
+- [x] be4cdc19 wallet button
+- [ ] wallet/twitter tasks
 - [ ] animations: universe
 - [ ] animations: planet movement in the planet selection window
 - [ ] animations: clicking on the planet to mine resources
@@ -26,7 +29,6 @@
 - [ ] sectors main page
 - [ ] sectors unlocking
 - [ ] bonuses button
-- [ ] twitter tasks
 - [ ] fields for the player's resource count
 - [ ] player's items buttons
 - [ ] storage
