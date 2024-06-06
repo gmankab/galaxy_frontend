@@ -1,20 +1,45 @@
-### frontend roadmap
+### tg webapp frontend roadmap
+
 - [x] 07723351 init frontend on typescript
 - [x] 07723351 & 865d81b0 background, planet
-- [x] 5d79617c remove black borders
 - [x] 34587e92 add coins counter in top left corner
 - [x] bc7f1273 gitlab ci auto deploy on gitlab pages
-- [x] 53f4e119 fix shadow
-- [x] 1db09480 remove blue border
 - [x] 89c27301 getting userid of telegram user
 - [x] ee65111c horizontal mode lock
 - [x] 794fe115 sent clicking requests to fastapi backend with user's telegram id
-- [x] f570fab2 coins couner design - https://t.me/c/2219575184/60
+- [x] f570fab2 proper coins couner design
 - [x] d2a0d6c6 add menu button
 - [x] 9bbcdc68 add opened menu
-- [ ] settings button should open settings
-- [ ] settings: connect ton walet or @cryptobot to the app
-- [ ] settings: connect twitter
+- [x] settings: button
+- [ ] set default backend url - paul.freemyip.com:8000/docs
+- [ ] load coins amount from backend on start
 - [ ] settings: enable/disable sound
+- [ ] animations: universe
+- [ ] animations: planet movement in the planet selection window
+- [ ] animations: clicking on the planet to mine resources
+- [ ] animations: flying ship around planet
+- [ ] shop: button
+- [ ] shop: purchase pop-up window
+- [ ] back button that opens planet choosing page
 - [ ] planet choosing
 - [ ] resource progress bar
+- [ ] sectors main page
+- [ ] sectors unlocking
+- [ ] bonuses button
+- [ ] twitter tasks
+- [ ] fields for the player's resource count
+- [ ] player's items buttons
+- [ ] storage
+- [ ] drill
+- [ ] ship
+- [ ] functional fields above buttons 7, 8, 9
+- [ ] "!" - item description
+- [ ] "up" - item level up
+- [ ] "1, 2, 3 ..." - item level
+- [ ] button to open information about item characteristics, upgrade costs, etc.
+- [ ] auto resource mining
+- [ ] start auto mining when the player exits
+- [ ] end auto mining when the maximum time is reached
+- [ ] ore button
+- [ ] increase ore amount on click
+
