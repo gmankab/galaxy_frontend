@@ -59,7 +59,7 @@ const App: React.FC = () => {
 
   const fetchCoins = async (userId: number) => {
     try {
-      const response = await fetch(`http://localhost:8000/coin/get?tg_id=${userId}`, {
+      const response = await fetch(`http://paul.freemyip.com:8000/coin/get?tg_id=${userId}`, {
         method: 'GET',
         headers: {
           'accept': 'application/json'
@@ -79,7 +79,7 @@ const App: React.FC = () => {
 
 const saveCoins = async (userId: number, clicks: number) => {
   try {
-    const response = await fetch(`http://localhost:8000/coin/add`, {
+    const response = await fetch(`http://paul.freemyip.com:8000/coin/add`, {
       method: 'POST',
       headers: {
         'accept': 'application/json',
