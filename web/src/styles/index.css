@@ -47,8 +47,8 @@ html, body {
 
 .user-id {
   position: absolute;
-  top: 80px; /* Adjust as needed */
-  left: 10px; /* Adjust as needed */ 
+  bottom: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */ 
   font-size: 20px;
   font-weight: bold;
   transition: transform 0.3s ease-in-out;
@@ -136,5 +136,18 @@ html, body {
 .menu img {
   width: 165px; /* Adjust as needed */
   height: auto;
+}
+
+.voice-toggle {
+  position: absolute;
+  top: 20px;
+  left: 2px;
+  width: 160px;
+  height: 160px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 1001; /* Ensure the button is above other elements */
 }
 

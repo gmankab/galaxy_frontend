@@ -3,7 +3,9 @@ import './styles/index.css';
 import planetImage from './assets/planet/green.svg';
 import menuButtonImage from './assets/menu_button.svg';
 import openedMenuImage from './assets/opened_menu.svg';
-import shopButtonImage from './assets/shop_button.svg'
+import shopButtonImage from './assets/shop_button.svg';
+import voiceOnImage from './assets/voice_on.svg';
+import voiceOffImage from './assets/voice_off.svg';
 import { useOrientation } from './useOrientation';
 import OrientationWarning from './OrientationWarning';
 import api from './api'; // Импортируем нашу утилиту
@@ -13,6 +15,7 @@ const App: React.FC = () => {
   const [clicksInInterval, setClicksInInterval] = useState<number>(0);
   const [userId, setUserId] = useState<number | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [isVoiceOn, setIsVoiceOn] = useState<boolean>(true);
   const horizontalMode: number = 1; // Set to 0 for vertical mode, 1 for horizontal
   const isPortrait: boolean = useOrientation(horizontalMode);
   const saveInterval = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -91,15 +94,24 @@ const App: React.FC = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const toggleVoice = () => {
+    setIsVoiceOn(!isVoiceOn);
+  };
+
   return (
     <div id="app">
       {horizontalMode === 0 && !isPortrait && <OrientationWarning />}
       {isMenuOpen && (
         <div className="menu">
           <img src={openedMenuImage} alt="Opened Menu" />
-          <div className="user-id">User ID: {userId}</div>
+          <div
+            className="voice-toggle"
+            onClick={toggleVoice}
+            style={{ backgroundImage: `url(${isVoiceOn ? voiceOnImage : voiceOffImage})` }}
+          ></div>
         </div>
       )}
+      <div className="user-id">User ID: {userId}</div>
       <div 
         className={`menu-button ${isMenuOpen ? 'hidden' : ''}`} 
         onClick={toggleMenu} 
