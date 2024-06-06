@@ -17,6 +17,9 @@
 - [x] 25cb8b20 settings: enable/disable sound
 - [x] be4cdc19 twitter button
 - [x] be4cdc19 wallet button
+- [x] 53421a7c animations: clicking planet
+- [x] 3e0db323 clans button
+- [x] 3e0db323 gift button
 - [ ] wallet/twitter tasks
 - [ ] animations: universe
 - [ ] animations: planet movement in the planet selection window
