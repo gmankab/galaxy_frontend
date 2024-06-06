@@ -10,6 +10,7 @@
 - commits should be as small as possible
 - 10 little commits are better then 1 big commit
 - we don't use docker, we use podman only
+- use `'` instead of `"`
 
 ## important files
 
