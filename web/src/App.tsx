@@ -3,6 +3,7 @@ import './styles/index.css';
 import planetImage from './assets/planet/green.svg';
 import menuButtonImage from './assets/menu_button.svg';
 import openedMenuImage from './assets/opened_menu.svg';
+import shopButtonImage from './assets/shop_button.svg'
 import { useOrientation } from './useOrientation';
 import OrientationWarning from './OrientationWarning';
 import api from './api'; // Импортируем нашу утилиту
@@ -103,7 +104,11 @@ const App: React.FC = () => {
         className={`menu-button ${isMenuOpen ? 'hidden' : ''}`} 
         onClick={toggleMenu} 
         style={{ backgroundImage: `url(${menuButtonImage})` }}
-      ></div> 
+      ></div>
+      <div 
+        className="shop-button"
+	style={{ backgroundImage: `url(${shopButtonImage})` }}
+      ></div>
       <div className="counter-container">
         <div className="counter">{count}</div>
       </div>

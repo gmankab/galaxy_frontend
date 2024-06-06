@@ -102,6 +102,19 @@ html, body {
   z-index: 1001; /* Ensure the button is above other elements */
 }
 
+.shop-button {
+  position: absolute;
+  top: 10px;
+  left: 85px;
+  width: 70px;
+  height: 70px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 1001; /* Ensure the button is above other elements */
+}
+
 .menu-button.hidden {
   opacity: 0;
   cursor: pointer;
