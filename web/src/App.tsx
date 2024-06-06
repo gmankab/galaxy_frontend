@@ -10,7 +10,7 @@ import twitterButtonImage from './assets/connct_x.svg';
 import walletButtonImage from './assets/connect_wallet.svg';
 import { useOrientation } from './useOrientation';
 import OrientationWarning from './OrientationWarning';
-import api from './api'; // Импортируем нашу утилиту
+import api from './api';
 
 const App: React.FC = () => {
   const [count, setCount] = useState<number>(0);
@@ -18,6 +18,7 @@ const App: React.FC = () => {
   const [userId, setUserId] = useState<number | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isVoiceOn, setIsVoiceOn] = useState<boolean>(true);
+  const [isPlanetClicked, setIsPlanetClicked] = useState<boolean>(false); // Новое состояние
   const horizontalMode: number = 1; // Set to 0 for vertical mode, 1 for horizontal
   const isPortrait: boolean = useOrientation(horizontalMode);
   const saveInterval = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -90,6 +91,10 @@ const App: React.FC = () => {
   const handlePlanetClick = () => {
     setCount(count + 1);
     setClicksInInterval(clicksInInterval + 1);
+    setIsPlanetClicked(true);
+    setTimeout(() => {
+      setIsPlanetClicked(false);
+    }, 300); // Animation duration in milliseconds
   };
 
   const toggleMenu = () => {
@@ -135,7 +140,7 @@ const App: React.FC = () => {
         <div className="counter">{count}</div>
       </div>
       <div
-        className="planet"
+        className={`planet ${isPlanetClicked ? 'clicked' : ''}`}
         onClick={handlePlanetClick}
         style={{ backgroundImage: `url(${planetImage})` }}
       ></div>

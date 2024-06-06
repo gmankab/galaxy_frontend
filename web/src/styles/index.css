@@ -40,8 +40,10 @@ html, body {
 }
 
 .counter {
+  position: absolute;
   color: white;
   font-size: 20px;
+  right: 15px;
   font-weight: bold;
   user-select: none;
 }
@@ -55,6 +57,18 @@ html, body {
   transition: transform 0.3s ease-in-out;
 }
 
+@keyframes planet-shrink {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .planet {
   width: 200px;
   height: 200px;
@@ -64,6 +78,11 @@ html, body {
   cursor: pointer;
   position: fixed;
   -webkit-tap-highlight-color: transparent; /* Removing selection on mobile devices */
+  transition: transform 0.2s;
+}
+
+.planet.clicked {
+  animation: planet-shrink 0.3s ease-in-out;
 }
 
 .orientation-warning {
