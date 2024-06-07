@@ -21,6 +21,10 @@
 - [x] 3e0db323 clans button
 - [x] 3e0db323 gift button
 - [x] 5acbf580 animations: buttons
+- [x] 268d3a27 auto click button
+- [x] 05f0b7ea base autoclick mechanism 
+- [ ] auto resource mining
+- [ ] start auto mining when the player exits
 - [ ] wallet/twitter tasks
 - [ ] animations: universe
 - [ ] animations: planet movement in the planet selection window
@@ -43,8 +47,6 @@
 - [ ] "up" - item level up
 - [ ] "1, 2, 3 ..." - item level
 - [ ] button to open information about item characteristics, upgrade costs, etc.
-- [ ] auto resource mining
-- [ ] start auto mining when the player exits
 - [ ] end auto mining when the maximum time is reached
 - [ ] ore button
 - [ ] increase ore amount on click
