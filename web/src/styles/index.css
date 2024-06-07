@@ -122,11 +122,11 @@ html, body {
   z-index: 1001; /* Ensure the button is above other elements */
 }
 
+.auto-button,
 .shop-button,
 .gift-button,
 .clans-button {
   position: absolute;
-  top: 10px;
   width: 70px;
   height: 70px;
   background-size: contain;
@@ -139,16 +139,25 @@ html, body {
 
 .shop-button {
   left: 85px;
+  top: 10px;
 }
 
 .gift-button {
   left: 160px;
+  top: 10px;
 }
 
 .clans-button {
   left: 235px;
+  top: 10px;
 }
 
+.auto-button {
+  right: 10px;
+  bottom: 20px;
+}
+
+.auto-button:active,
 .shop-button:active,
 .gift-button:active,
 .clans-button:active {

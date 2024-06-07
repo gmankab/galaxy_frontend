@@ -10,6 +10,7 @@ import twitterButtonImage from './assets/buttons/connct_x.svg';
 import walletButtonImage from './assets/buttons/connect_wallet.svg';
 import giftButtonImage from './assets/buttons/gift_button.svg';
 import clansButtonImage from './assets/buttons/clans_button.svg';
+import autoButtonImage from './assets/buttons/auto_button.svg'
 import { useOrientation } from './useOrientation';
 import OrientationWarning from './OrientationWarning';
 import api from './api';
@@ -145,6 +146,10 @@ const App: React.FC = () => {
       <div 
         className="clans-button"
 	style={{ backgroundImage: `url(${clansButtonImage})` }}
+      ></div>
+      <div
+        className="auto-button"
+	style={{ backgroundImage: `url(${autoButtonImage})` }}
       ></div>
       <div className="counter-container">
         <div className="counter">{count}</div>
