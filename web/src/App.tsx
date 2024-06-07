@@ -91,6 +91,19 @@ const App: React.FC = () => {
     }
   };
 
+  const autoClick = async (userId: number, interval: number, duration: number) => {
+    try {
+      await api.post(`/coin/autoclick`, {
+        "tg_id": userId,
+        "interval": interval,
+	"duration": duration,
+      });
+      console.log(`Autoclick run for ${userId}!`)
+    } catch (error) {
+      console.log('Failed to autoclick run:', error);
+    }
+  };
+
   const handlePlanetClick = () => {
     setCount(count + 1);
     setClicksInInterval(clicksInInterval + 1);
@@ -106,6 +119,12 @@ const App: React.FC = () => {
 
   const toggleVoice = () => {
     setIsVoiceOn(!isVoiceOn);
+  };
+
+  const handleAutoButtonClick = () => {
+    if (userId !== null) {
+      autoClick(userId, 1, 10);
+    }
   };
 
   return (
@@ -147,8 +166,9 @@ const App: React.FC = () => {
         className="clans-button"
 	style={{ backgroundImage: `url(${clansButtonImage})` }}
       ></div>
-      <div
+      <div 
         className="auto-button"
+	onClick={handleAutoButtonClick}
 	style={{ backgroundImage: `url(${autoButtonImage})` }}
       ></div>
       <div className="counter-container">
