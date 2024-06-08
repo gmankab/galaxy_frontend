@@ -23,7 +23,7 @@
 - [x] 5acbf580 animations: buttons
 - [x] 268d3a27 auto click button
 - [x] 05f0b7ea base autoclick mechanism 
-- [x] ec96fea1 tool buttons
+- [x] ec96fea1 player's items buttons
 - [x] 0d74b9a4 add level exp
 - [x] 5bffebba planet choosing
 - [ ] auto resource mining
@@ -40,7 +40,6 @@
 - [ ] sectors unlocking
 - [ ] bonuses button
 - [ ] fields for the player's resource count
-- [ ] player's items buttons
 - [ ] storage
 - [ ] drill
 - [ ] ship
