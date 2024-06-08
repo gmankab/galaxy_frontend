@@ -57,18 +57,6 @@ html, body {
   transition: transform 0.3s ease-in-out;
 }
 
-@keyframes planet-shrink {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.8);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 .planet {
   width: 200px;
   height: 200px;
@@ -81,8 +69,8 @@ html, body {
   transition: transform 0.2s;
 }
 
-.planet.clicked {
-  animation: planet-shrink 0.3s ease-in-out;
+.planet:active {
+  transform: scale(0.9);
 }
 
 .orientation-warning {
@@ -122,6 +110,9 @@ html, body {
   z-index: 1001; /* Ensure the button is above other elements */
 }
 
+.tool1-button,
+.tool2-button,
+.tool3-button,
 .auto-button,
 .shop-button,
 .gift-button,
@@ -157,6 +148,30 @@ html, body {
   bottom: 20px;
 }
 
+.tool1-button {
+  width: 80px;
+  height: 80px;
+  left: 90px;
+  bottom: 30px;
+}
+
+.tool2-button {
+  width: 80px;
+  height: 80px;
+  center: 10px;
+  bottom: 30px;
+}
+
+.tool3-button {
+  width: 80px;
+  height: 80px;
+  right: 90px;
+  bottom: 30px;
+}
+
+.tool1-button:active,
+.tool2-button:active,
+.tool3-button:active,
 .auto-button:active,
 .shop-button:active,
 .gift-button:active,

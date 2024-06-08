@@ -10,7 +10,10 @@ import twitterButtonImage from './assets/buttons/connct_x.svg';
 import walletButtonImage from './assets/buttons/connect_wallet.svg';
 import giftButtonImage from './assets/buttons/gift_button.svg';
 import clansButtonImage from './assets/buttons/clans_button.svg';
-import autoButtonImage from './assets/buttons/auto_button.svg'
+import autoButtonImage from './assets/buttons/auto_button.svg';
+import tool1ButtonImage from './assets/buttons/tool_1_button.svg';
+import tool2ButtonImage from './assets/buttons/tool_2_button.svg';
+import tool3ButtonImage from './assets/buttons/tool_3_button.svg';
 import { useOrientation } from './useOrientation';
 import OrientationWarning from './OrientationWarning';
 import api from './api';
@@ -108,9 +111,6 @@ const App: React.FC = () => {
     setCount(count + 1);
     setClicksInInterval(clicksInInterval + 1);
     setIsPlanetClicked(true);
-    setTimeout(() => {
-      setIsPlanetClicked(false);
-    }, 300); // Animation duration in milliseconds
   };
 
   const toggleMenu = () => {
@@ -165,6 +165,18 @@ const App: React.FC = () => {
       <div 
         className="clans-button"
 	style={{ backgroundImage: `url(${clansButtonImage})` }}
+      ></div>
+      <div
+        className="tool1-button"
+	style={{ backgroundImage: `url(${tool1ButtonImage})` }}
+      ></div>
+      <div
+        className="tool2-button"
+	style={{ backgroundImage: `url(${tool2ButtonImage})` }}
+      ></div>
+      <div
+        className="tool3-button"
+	style={{ backgroundImage: `url(${tool3ButtonImage})` }}
       ></div>
       <div 
         className="auto-button"
