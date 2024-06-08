@@ -1,0 +1,26 @@
+name: build and deploy
+on: [push]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 'latest'
+    - name: build
+      run: |
+        cd web
+        yarn install
+        yarn build
+    - name: upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: dist
+        path: web/dist
+    - name: deploy
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: web/dist
+
