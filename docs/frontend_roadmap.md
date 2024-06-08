@@ -10,6 +10,7 @@
 - [x] f570fab2 proper coins couner design
 - [x] d2a0d6c6 add menu button
 - [x] 9bbcdc68 add opened menu
+- [x] 10% done
 - [x] 15b38c8f set default backend url - paul.freemyip.com:8000/docs
 - [x] 794fe115 load coins amount from backend on start
 - [x] c04c3c09 rewritten on axios
@@ -22,7 +23,7 @@
 - [x] 3e0db323 gift button
 - [x] 5acbf580 animations: buttons
 - [x] 268d3a27 auto click button
-- [x] 05f0b7ea base autoclick mechanism 
+- [x] 05f0b7ea base autoclick mechanism
 - [x] ec96fea1 player's items buttons
 - [x] 0d74b9a4 add level exp
 - [x] 5bffebba planet choosing
