@@ -48,6 +48,48 @@ html, body {
   user-select: none;
 }
 
+.level-container {
+  position: absolute;
+  top: 10px;
+  center: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 250px; /* Adjust as needed */
+  height: 250px; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.level {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  user-select: none;
+}
+
+.progress-bar-container {
+  width: 93%;
+  height: 15px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: -25px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: green;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+
 .user-id {
   position: absolute;
   bottom: 10px; /* Adjust as needed */

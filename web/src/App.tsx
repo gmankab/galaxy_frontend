@@ -14,12 +14,14 @@ import autoButtonImage from './assets/buttons/auto_button.svg';
 import tool1ButtonImage from './assets/buttons/tool_1_button.svg';
 import tool2ButtonImage from './assets/buttons/tool_2_button.svg';
 import tool3ButtonImage from './assets/buttons/tool_3_button.svg';
+import levelExpImage from './assets/level_exp_info.svg';
 import { useOrientation } from './useOrientation';
 import OrientationWarning from './OrientationWarning';
 import api from './api';
 
 const App: React.FC = () => {
   const [count, setCount] = useState<number>(0);
+  const [level, setLevel] = useState<number>(0);
   const [clicksInInterval, setClicksInInterval] = useState<number>(0);
   const [userId, setUserId] = useState<number | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -77,6 +79,7 @@ const App: React.FC = () => {
       const data = response.data;
       const coin = data.coins;
       setCount(coin);
+      setLevel(Math.floor(coin / 10));
     } catch (error) {
       console.error('Failed to fetch coins:', error);
     }
@@ -108,7 +111,11 @@ const App: React.FC = () => {
   };
 
   const handlePlanetClick = () => {
-    setCount(count + 1);
+    setCount((prevCount) => {
+      const newCount = prevCount + 1;
+      setLevel(Math.floor(newCount / 10));
+      return newCount;
+    });
     setClicksInInterval(clicksInInterval + 1);
     setIsPlanetClicked(true);
   };
@@ -185,6 +192,14 @@ const App: React.FC = () => {
       ></div>
       <div className="counter-container">
         <div className="counter">{count}</div>
+      </div>
+      <div 
+      className="level-container"
+      style={{ backgroundImage: `url(${levelExpImage})` }}
+      ><div className="level">{level}</div>
+        <div className="progress-bar-container">
+          <div className="progress-bar" style={{ width: `${(count % 10) * 10}%` }}></div>
+	  </div>
       </div>
       <div
         className={`planet ${isPlanetClicked ? 'clicked' : ''}`}
