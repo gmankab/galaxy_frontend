@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './styles/index.css';
-import planetImage from './assets/planet/green.svg';
+import planetImageGreen from './assets/planet/green.svg';
+import planetImageBlue from './assets/planet/blue.svg';
 import menuButtonImage from './assets/buttons/menu_button.svg';
 import openedMenuImage from './assets/opened_menu.svg';
 import shopButtonImage from './assets/buttons/shop_button.svg';
@@ -20,6 +21,7 @@ import OrientationWarning from './OrientationWarning';
 import api from './api';
 
 const App: React.FC = () => {
+  const [planetImage, setPlanetImage] = useState<string>(planetImageGreen);
   const [count, setCount] = useState<number>(0);
   const [level, setLevel] = useState<number>(0);
   const [clicksInInterval, setClicksInInterval] = useState<number>(0);
@@ -134,6 +136,12 @@ const App: React.FC = () => {
     }
   };
 
+  const handleTool3ButtonClick = () => {
+    setPlanetImage((prevImage) =>
+      prevImage === planetImageGreen ? planetImageBlue : planetImageGreen
+    );
+  };
+
   return (
     <div id="app">
       {horizontalMode === 0 && !isPortrait && <OrientationWarning />}
@@ -183,6 +191,7 @@ const App: React.FC = () => {
       ></div>
       <div
         className="tool3-button"
+        onClick={handleTool3ButtonClick}
 	style={{ backgroundImage: `url(${tool3ButtonImage})` }}
       ></div>
       <div 
