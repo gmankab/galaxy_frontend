@@ -23,6 +23,8 @@
 - [x] 5acbf580 animations: buttons
 - [x] 268d3a27 auto click button
 - [x] 05f0b7ea base autoclick mechanism 
+- [x] ec96fea1 tool buttons
+- [x] 0d74b9a4 add level exp
 - [ ] auto resource mining
 - [ ] start auto mining when the player exits
 - [ ] wallet/twitter tasks
