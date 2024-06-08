@@ -25,6 +25,7 @@
 - [x] 05f0b7ea base autoclick mechanism 
 - [x] ec96fea1 tool buttons
 - [x] 0d74b9a4 add level exp
+- [x] 5bffebba planet choosing
 - [ ] auto resource mining
 - [ ] start auto mining when the player exits
 - [ ] wallet/twitter tasks
@@ -34,7 +35,6 @@
 - [ ] animations: flying ship around planet
 - [ ] shop: purchase pop-up window
 - [ ] back button that opens planet choosing page
-- [ ] planet choosing
 - [ ] resource progress bar
 - [ ] sectors main page
 - [ ] sectors unlocking
