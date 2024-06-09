@@ -11,7 +11,7 @@ import {
   twitterButtonImage,
   walletButtonImage,
   giftButtonImage,
-  clanssButtonImage,
+  clansButtonImage,
   autoButtonImage,
   tool1ButtonImage,
   tool2ButtonImage,
@@ -38,7 +38,6 @@ const App: React.FC = () => {
 
   useEffect(() => {
     console.log('Checking Telegram WebApp...');
-    console.log('clansButtonImage:', clanssButtonImage);
     if (window.Telegram && window.Telegram.WebApp) {
       console.log('Telegram WebApp found');
       const initDataUnsafe = window.Telegram.WebApp.initDataUnsafe;
@@ -179,7 +178,7 @@ const App: React.FC = () => {
       ></div>
       <div 
         className="clans-button"
-	style={{ backgroundImage: `url(${giftButtonImage})` }}
+	style={{ backgroundImage: `url(${clansButtonImage})` }}
       ></div>
       <div
         className="tool1-button"
