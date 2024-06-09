@@ -22,13 +22,13 @@
 - [x] 3e0db323 clans button
 - [x] 3e0db323 gift button
 - [x] 5acbf580 animations: buttons
-- [x] 268d3a27 auto click button
-- [x] 05f0b7ea base autoclick mechanism
+- [x] 39a995bf auto click button
+- [x] 8a38a735 base autoclick mechanism
 - [x] ec96fea1 player's items buttons
 - [x] 0d74b9a4 add level exp
-- [x] 5bffebba planet choosing
+- [x] 5faf632a planet choosing
 - [x] bc7f1273 github actions auto deploy on github pages
-- [x] aa485fa1 & 092ed802 and adaptation for phones 
+- [x] 63bcbbf7 & 092ed802 adaptation for phones 
 - [ ] auto resource mining
 - [ ] start auto mining when the player exits
 - [ ] wallet/twitter tasks
