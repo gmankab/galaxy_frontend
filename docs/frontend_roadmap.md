@@ -28,6 +28,7 @@
 - [x] 0d74b9a4 add level exp
 - [x] 5bffebba planet choosing
 - [x] bc7f1273 github actions auto deploy on github pages
+- [x] aa485fa1 and adaptation for phones other than 4 inches and tests
 - [ ] auto resource mining
 - [ ] start auto mining when the player exits
 - [ ] wallet/twitter tasks
