@@ -38,6 +38,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     console.log('Checking Telegram WebApp...');
+    console.log('clansButtonImage:', clanssButtonImage);
     if (window.Telegram && window.Telegram.WebApp) {
       console.log('Telegram WebApp found');
       const initDataUnsafe = window.Telegram.WebApp.initDataUnsafe;
