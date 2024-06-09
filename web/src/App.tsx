@@ -1,21 +1,24 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './styles/index.css';
-import planetImageGreen from './assets/planet/green.svg';
-import planetImageBlue from './assets/planet/blue.svg';
-import menuButtonImage from './assets/buttons/menu_button.svg';
-import openedMenuImage from './assets/opened_menu.svg';
-import shopButtonImage from './assets/buttons/shop_button.svg';
-import voiceOnImage from './assets/buttons/voice_on.svg';
-import voiceOffImage from './assets/buttons/voice_off.svg';
-import twitterButtonImage from './assets/buttons/connct_x.svg';
-import walletButtonImage from './assets/buttons/connect_wallet.svg';
-import giftButtonImage from './assets/buttons/gift_button.svg';
-import clansButtonImage from './assets/buttons/clans_button.svg';
-import autoButtonImage from './assets/buttons/auto_button.svg';
-import tool1ButtonImage from './assets/buttons/tool_1_button.svg';
-import tool2ButtonImage from './assets/buttons/tool_2_button.svg';
-import tool3ButtonImage from './assets/buttons/tool_3_button.svg';
-import levelExpImage from './assets/level_exp_info.svg';
+import {
+  planetImageGreen,
+  planetImageBlue,
+  menuButtonImage,
+  openedMenuImage,
+  shopButtonImage,
+  voiceOnImage,
+  voiceOffImage,
+  twitterButtonImage,
+  walletButtonImage,
+  giftButtonImage,
+  clansButtonImage,
+  autoButtonImage,
+  tool1ButtonImage,
+  tool2ButtonImage,
+  tool3ButtonImage,
+  levelExpImage,
+  resourseRareImage,
+} from './assets/images';
 import { useOrientation } from './useOrientation';
 import OrientationWarning from './OrientationWarning';
 import api from './api';
@@ -99,13 +102,9 @@ const App: React.FC = () => {
     }
   };
 
-  const autoClick = async (userId: number, interval: number, duration: number) => {
+  const autoClick = async (userId: number) => {
     try {
-      await api.post(`/coin/autoclick`, {
-        "tg_id": userId,
-        "interval": interval,
-	"duration": duration,
-      });
+      await api.get(`/coin/autoclick?tg_id=${userId}`);
       console.log(`Autoclick run for ${userId}!`)
     } catch (error) {
       console.log('Failed to autoclick run:', error);
@@ -132,7 +131,7 @@ const App: React.FC = () => {
 
   const handleAutoButtonClick = () => {
     if (userId !== null) {
-      autoClick(userId, 1, 10);
+      autoClick(userId);
     }
   };
 
@@ -199,7 +198,9 @@ const App: React.FC = () => {
 	onClick={handleAutoButtonClick}
 	style={{ backgroundImage: `url(${autoButtonImage})` }}
       ></div>
-      <div className="counter-container">
+      <div 
+      className="counter-container"
+      style={{ backgroundImage: `url(${resourseRareImage})` }}>
         <div className="counter">{count}</div>
       </div>
       <div 
