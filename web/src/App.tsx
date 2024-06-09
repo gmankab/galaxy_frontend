@@ -179,7 +179,7 @@ const App: React.FC = () => {
       ></div>
       <div 
         className="clans-button"
-	style={{ backgroundImage: `url(${clanssButtonImage})` }}
+	style={{ backgroundImage: `url(${giftButtonImage})` }}
       ></div>
       <div
         className="tool1-button"
