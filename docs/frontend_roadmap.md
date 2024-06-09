@@ -28,7 +28,8 @@
 - [x] 0d74b9a4 add level exp
 - [x] 5faf632a planet choosing
 - [x] bc7f1273 github actions auto deploy on github pages
-- [x] 63bcbbf7 & 092ed802 adaptation for phones 
+- [x] 63bcbbf7 & 092ed802 adaptation for phones
+- [x] 479cffc5 fix yarn build (does not import some files)
 - [ ] auto resource mining
 - [ ] start auto mining when the player exits
 - [ ] wallet/twitter tasks
