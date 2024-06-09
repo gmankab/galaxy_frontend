@@ -11,7 +11,7 @@ import {
   twitterButtonImage,
   walletButtonImage,
   giftButtonImage,
-  clansButtonImage,
+  clanssButtonImage,
   autoButtonImage,
   tool1ButtonImage,
   tool2ButtonImage,
@@ -178,7 +178,7 @@ const App: React.FC = () => {
       ></div>
       <div 
         className="clans-button"
-	style={{ backgroundImage: `url(${clansButtonImage})` }}
+	style={{ backgroundImage: `url(${clanssButtonImage})` }}
       ></div>
       <div
         className="tool1-button"

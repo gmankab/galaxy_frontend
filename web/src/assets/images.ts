@@ -9,7 +9,7 @@ import voiceOffImage from './buttons/voice_off.svg';
 import twitterButtonImage from './buttons/connct_x.svg';
 import walletButtonImage from './buttons/connect_wallet.svg';
 import giftButtonImage from './buttons/gift_button.svg';
-import clansButtonImage from './buttons/clans_button.svg';
+import clanssButtonImage from './buttons/clans_button.svg';
 import autoButtonImage from './buttons/auto_button.svg';
 import tool1ButtonImage from './buttons/tool_1_button.svg';
 import tool2ButtonImage from './buttons/tool_2_button.svg';
@@ -28,7 +28,7 @@ export {
   twitterButtonImage,
   walletButtonImage,
   giftButtonImage,
-  clansButtonImage,
+  clanssButtonImage,
   autoButtonImage,
   tool1ButtonImage,
   tool2ButtonImage,
