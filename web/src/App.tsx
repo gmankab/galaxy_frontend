@@ -167,8 +167,8 @@ const App: React.FC = () => {
           className="connect-wallet"
           style={{ backgroundImage: `url(${walletButtonImage})` }}
         ></div>
+	<div className="user-id">User ID: {userId}</div>
       </div>
-      <div className="user-id">User ID: {userId}</div>
       <div 
         className={`menu-button ${isMenuOpen ? 'hidden' : ''}`} 
         onClick={toggleMenu} 
