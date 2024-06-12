@@ -100,8 +100,9 @@ html, body {
 }
 
 .planet {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
+  top: 315px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
