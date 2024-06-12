@@ -74,13 +74,13 @@ html, body {
 
 .planet-hp-container {
   position: absolute;
-  bottom: 10px;
+  bottom: 50px;
   center: 10px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 250px; /* Adjust as needed */
-  height: 250px; /* Adjust as needed */
+  width: 170px; /* Adjust as needed */
+  height: 170px; /* Adjust as needed */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,8 +90,8 @@ html, body {
 .planet-hp {
   position: absolute;
   color: white;
-  font-size: 20px;
-  top: 130px;
+  font-size: 15px;
+  top: 86px;
   left: 50%;
   transform: translateX(-50%) scaleY(-1);
   font-weight: bold;
@@ -102,11 +102,11 @@ html, body {
 
 .progress-bar-container {
   width: 93%;
-  height: 15px;
+  height: 10px;
   background-color: #ddd;
   border-radius: 10px;
   overflow: hidden;
-  margin-top: -25px;
+  margin-top: -18px;
 }
 
 .progress-bar {
@@ -216,8 +216,8 @@ html, body {
 }
 
 .auto-button {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 50px;
   right: 10px;
   bottom: 130px;
 }
