@@ -93,7 +93,7 @@ const App: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    const images = [voiceOnImage, voiceOffImage, twitterButtonImage, walletButtonImage];
+    const images = [voiceOnImage, voiceOffImage, twitterButtonImage, walletButtonImage, menuButtonImage];
     const preloaded: { [key: string]: string } = {};
 
     images.forEach((src) => {
