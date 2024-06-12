@@ -36,6 +36,7 @@
 - [x] e6f698df enlargement of the planet
 - [x] d51463c6 multitouch
 - [x] d9519772 fix allocation
+- [x] 4e0d8a6c Expand the WebApp to full screen
 - [ ] auto resource mining
 - [ ] start auto mining when the player exits
 - [ ] wallet/twitter tasks
