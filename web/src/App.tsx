@@ -38,7 +38,7 @@ const App: React.FC = () => {
   const isPortrait: boolean = useOrientation(horizontalMode);
   const saveInterval = useRef<ReturnType<typeof setInterval> | null>(null);
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  const [preloadedImages, setPreloadedImages] = useState<{ [key: string]: string }>({});
+  const [, setPreloadedImages] = useState<{ [key: string]: string }>({});
 
   useEffect(() => {
     console.log('Checking Telegram WebApp...');
