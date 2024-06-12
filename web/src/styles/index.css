@@ -26,6 +26,29 @@ html, body {
 
 .counter-container {
   position: absolute;
+  top: 80px;
+  right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 120px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  right: 15px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.donation-container {
+  position: absolute;
   top: 40px;
   right: 10px;
   background-size: contain;
@@ -38,7 +61,7 @@ html, body {
   align-items: center;
 }
 
-.counter {
+.donation {
   position: absolute;
   color: white;
   font-size: 20px;
