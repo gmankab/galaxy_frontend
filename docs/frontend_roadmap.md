@@ -11,7 +11,7 @@
 - [x] d2a0d6c6 add menu button
 - [x] 9bbcdc68 add opened menu
 - [x] 10% done
-- [x] 15b38c8f set default backend url - paul.freemyip.com:8000/docs
+- [x] 15b38c8f set default backend url - paul.freemyip.com/docs
 - [x] 794fe115 load coins amount from backend on start
 - [x] c04c3c09 rewritten on axios
 - [x] 75e0c742 shop: button
@@ -62,4 +62,23 @@
 - [ ] end auto mining when the maximum time is reached
 - [ ] ore button
 - [ ] increase ore amount on click
+- [ ] settings: connect twitter
+- [ ] settings: connect cryptowallet to the app
+- [ ] twitter: subscription
+- [ ] twitter: verification of subscription linked to player's account
+- [ ] twitter: retweet of a post and checking the retweet on the player's twitter account
+- [ ] clans: create
+- [ ] clans: raiting
+- [ ] clans: player rank number
+- [ ] clans: moderation
+- [ ] clans: inviting members
+- [ ] clans: removing members
+- [ ] clans: ranking algorithms
+- [ ] clans: ranking system
+- [ ] clans: ranking table
+- [ ] shop: crediting purchased rare resources to the player
+- [ ] shop: payment for purchases
+- [ ] shop: verification of completed payment
+- [ ] start auto mining when the player exits
+- [ ] end auto mining when the maximum time is reached
 
