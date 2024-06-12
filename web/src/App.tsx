@@ -144,24 +144,22 @@ const App: React.FC = () => {
   return (
     <div id="app">
       {horizontalMode === 0 && !isPortrait && <OrientationWarning />}
-      {isMenuOpen && (
-        <div className="menu">
-          <img src={openedMenuImage} alt="Opened Menu" />
-          <div
-            className="voice-toggle"
-            onClick={toggleVoice}
-            style={{ backgroundImage: `url(${isVoiceOn ? voiceOnImage : voiceOffImage})` }}
-          ></div>
-	  <div
-	    className="connect-twitter"
-	    style={{ backgroundImage: `url(${twitterButtonImage})` }}
-	    ></div>
-	  <div
-	    className="connect-wallet"
-	    style={{ backgroundImage: `url(${walletButtonImage})` }}
-	    ></div>
-        </div>
-      )}
+      <div className={`menu ${isMenuOpen ? 'visible' : 'hidden'}`}>
+        <img src={openedMenuImage} alt="Opened Menu" />
+        <div
+          className="voice-toggle"
+          onClick={toggleVoice}
+          style={{ backgroundImage: `url(${isVoiceOn ? voiceOnImage : voiceOffImage})` }}
+        ></div>
+        <div
+          className="connect-twitter"
+          style={{ backgroundImage: `url(${twitterButtonImage})` }}
+        ></div>
+        <div
+          className="connect-wallet"
+          style={{ backgroundImage: `url(${walletButtonImage})` }}
+        ></div>
+      </div>
       <div className="user-id">User ID: {userId}</div>
       <div 
         className={`menu-button ${isMenuOpen ? 'hidden' : ''}`} 
@@ -170,46 +168,47 @@ const App: React.FC = () => {
       ></div>
       <div 
         className="shop-button"
-	style={{ backgroundImage: `url(${shopButtonImage})` }}
+        style={{ backgroundImage: `url(${shopButtonImage})` }}
       ></div>
       <div 
         className="gift-button"
-	style={{ backgroundImage: `url(${giftButtonImage})` }}
+        style={{ backgroundImage: `url(${giftButtonImage})` }}
       ></div>
       <div 
         className="clans-button"
-	style={{ backgroundImage: `url(${clansButtonImage})` }}
+        style={{ backgroundImage: `url(${clansButtonImage})` }}
       ></div>
       <div
         className="tool1-button"
-	style={{ backgroundImage: `url(${tool1ButtonImage})` }}
+        style={{ backgroundImage: `url(${tool1ButtonImage})` }}
       ></div>
       <div
         className="tool2-button"
-	style={{ backgroundImage: `url(${tool2ButtonImage})` }}
+        style={{ backgroundImage: `url(${tool2ButtonImage})` }}
       ></div>
       <div
         className="tool3-button"
         onClick={handleTool3ButtonClick}
-	style={{ backgroundImage: `url(${tool3ButtonImage})` }}
+        style={{ backgroundImage: `url(${tool3ButtonImage})` }}
       ></div>
       <div 
         className="auto-button"
-	onClick={handleAutoButtonClick}
-	style={{ backgroundImage: `url(${autoButtonImage})` }}
+        onClick={handleAutoButtonClick}
+        style={{ backgroundImage: `url(${autoButtonImage})` }}
       ></div>
       <div 
-      className="counter-container"
-      style={{ backgroundImage: `url(${resourseRareImage})` }}>
+        className="counter-container"
+        style={{ backgroundImage: `url(${resourseRareImage})` }}>
         <div className="counter">{count}</div>
       </div>
       <div 
-      className="level-container"
-      style={{ backgroundImage: `url(${levelExpImage})` }}
-      ><div className="level">{level}</div>
+        className="level-container"
+        style={{ backgroundImage: `url(${levelExpImage})` }}
+      >
+        <div className="level">{level}</div>
         <div className="progress-bar-container">
           <div className="progress-bar" style={{ width: `${(count % 10) * 10}%` }}></div>
-	  </div>
+        </div>
       </div>
       <div
         className={`planet ${isPlanetClicked ? 'clicked' : ''}`}
@@ -219,6 +218,5 @@ const App: React.FC = () => {
     </div>
   );
 };
-
 export default App;
 
