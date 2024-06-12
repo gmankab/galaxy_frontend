@@ -223,6 +223,7 @@ html, body {
   position: absolute;
   top: 10px;
   left: 10px;
+  display: none;
   z-index: 1000; /* Ensure the menu is above other elements */
   display: flex;
   flex-direction: column;
@@ -237,6 +238,13 @@ html, body {
   height: auto;
 }
 
+.menu.visible {
+  display: block; /* Show when menu is open */
+}
+
+.menu.hidden {
+  display: none; /* Hide when menu is closed */
+}
 
 .voice-toggle,
 .connect-twitter,
