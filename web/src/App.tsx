@@ -17,6 +17,7 @@ import {
   tool2ButtonImage,
   tool3ButtonImage,
   planetHpImage,
+  resourceDonatonImage,
   resourseRareImage,
 } from './assets/images';
 import { useOrientation } from './useOrientation';
@@ -203,6 +204,11 @@ const App: React.FC = () => {
         onClick={handleAutoButtonClick}
         style={{ backgroundImage: `url(${autoButtonImage})` }}
       ></div>
+      <div
+        className="donation-container"
+        style={{ backgroundImage: `url(${resourceDonatonImage})` }}>
+        <div className="donation">{10}</div>
+      </div>
       <div 
         className="counter-container"
         style={{ backgroundImage: `url(${resourseRareImage})` }}>
