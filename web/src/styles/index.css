@@ -68,6 +68,8 @@ html, body {
   right: 15px;
   font-weight: bold;
   user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
 }
 
 .planet-hp-container {
@@ -94,6 +96,8 @@ html, body {
   transform: translateX(-50%) scaleY(-1);
   font-weight: bold;
   user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
 }
 
 .progress-bar-container {
@@ -121,6 +125,8 @@ html, body {
   font-weight: bold;
   transition: transform 0.3s ease-in-out;
   user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
 }
 
 .planet {
@@ -136,6 +142,7 @@ html, body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) translateY(-20px);
+  -webkit-user-select: none;
 }
 
 .planet:active {
@@ -185,6 +192,7 @@ html, body {
   z-index: 1001; /* Ensure the button is above other elements */
   transition: transform 0.1s ease; /* Smooth transition for the scaling effect */
   -webkit-tap-highlight-color: transparent; /* Removing selection on mobile devices */
+  -webkit-user-select: none;
 }
 
 .menu-button {
@@ -241,6 +249,8 @@ html, body {
   left: 10px;
   opacity: 0.0;
   user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
 }
 
 .test-button:hover {
@@ -300,6 +310,7 @@ html, body {
   z-index: 1001; /* Ensure the button is above other elements */
   transition: transform 0.1s ease; /* Smooth transition for the scaling effect */
   -webkit-tap-highlight-color: transparent; /* Removing selection on mobile devices */
+  -webkit-user-select: none;
 }
 
 .voice-toggle {
