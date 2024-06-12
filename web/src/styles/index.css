@@ -125,7 +125,6 @@ html, body {
 .planet {
   width: 300px;
   height: 300px;
-  top: 315px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -133,10 +132,13 @@ html, body {
   position: fixed;
   -webkit-tap-highlight-color: transparent; /* Removing selection on mobile devices */
   transition: transform 0.2s;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) translateY(-20px);
 }
 
 .planet:active {
-  transform: scale(0.9);
+  transform: translate(-50%, -50%) translateY(-20px) scale(0.9); /* Merging transformations */
 }
 
 .orientation-warning {
