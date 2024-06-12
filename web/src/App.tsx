@@ -38,6 +38,7 @@ const App: React.FC = () => {
   const isPortrait: boolean = useOrientation(horizontalMode);
   const saveInterval = useRef<ReturnType<typeof setInterval> | null>(null);
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  const [preloadedImages, setPreloadedImages] = useState<{ [key: string]: string }>({});
 
   useEffect(() => {
     console.log('Checking Telegram WebApp...');
@@ -89,6 +90,22 @@ const App: React.FC = () => {
     return () => {
       clearInterval(restoreHpInterval);
     };
+  }, []);
+
+  useEffect(() => {
+    const images = [voiceOnImage, voiceOffImage, twitterButtonImage, walletButtonImage];
+    const preloaded: { [key: string]: string } = {};
+
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = () => {
+        preloaded[src] = src;
+        if (Object.keys(preloaded).length === images.length) {
+          setPreloadedImages(preloaded);
+        }
+      };
+    });
   }, []);
 
   const fetchCoins = async (userId: number) => {
