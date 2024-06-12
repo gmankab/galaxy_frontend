@@ -120,6 +120,7 @@ html, body {
   font-size: 20px;
   font-weight: bold;
   transition: transform 0.3s ease-in-out;
+  user-select: none;
 }
 
 .planet {
@@ -206,8 +207,10 @@ html, body {
 }
 
 .auto-button {
+  width: 80px;
+  height: 80px;
   right: 10px;
-  bottom: 100px;
+  bottom: 130px;
 }
 
 .tool1-button {
@@ -316,8 +319,8 @@ html, body {
 /* Медиа-запросы для экранов высотой от 481 до 767 пикселей */
 @media only screen  and (max-height: 481px) {
   .planet {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
   }
   .shop-button {
     left: 90px;
