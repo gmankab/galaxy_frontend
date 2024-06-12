@@ -27,7 +27,7 @@ import api from './api';
 const App: React.FC = () => {
   const [planetImage, setPlanetImage] = useState<string>(planetImageGreen);
   const [count, setCount] = useState<number>(0);
-  const [planethp, setPlanetHp] = useState<number>(10);
+  const [planethp, setPlanetHp] = useState<number>(50);
   const [clicksInInterval, setClicksInInterval] = useState<number>(0);
   const [userId, setUserId] = useState<number | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -83,7 +83,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const restoreHpInterval = setInterval(() => {
-      setPlanetHp((prevHp) => Math.min(10, prevHp + 1));
+      setPlanetHp((prevHp) => Math.min(50, prevHp + 1));
     }, 5000);
 
     return () => {
@@ -227,7 +227,7 @@ const App: React.FC = () => {
       <div
         className="donation-container"
         style={{ backgroundImage: `url(${resourceDonatonImage})` }}>
-        <div className="donation">{10}</div>
+        <div className="donation">{50}</div>
       </div>
       <div 
         className="counter-container"
@@ -238,9 +238,9 @@ const App: React.FC = () => {
         className="planet-hp-container"
         style={{ backgroundImage: `url(${planetHpImage})` }}
       >
-        <div className="planet-hp">{planethp}/10</div>
+        <div className="planet-hp">{planethp}/50</div>
         <div className="progress-bar-container">
-          <div className="progress-bar" style={{ width: `${(planethp / 10) * 100}%` }}></div>
+          <div className="progress-bar" style={{ width: `${(planethp / 50) * 100}%` }}></div>
         </div>
       </div>
       <div
