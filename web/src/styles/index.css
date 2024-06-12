@@ -166,6 +166,7 @@ html, body {
   max-width: 300px;
 }
 
+.test-button,
 .menu-button,
 .tool1-button,
 .tool2-button,
@@ -232,6 +233,18 @@ html, body {
   height: 80px;
   right: 40px;
   bottom: 30px;
+}
+
+.test-button {
+  width: 30px;
+  height: 30px;
+  left: 10px;
+  opacity: 0.0;
+  user-select: none;
+}
+
+.test-button:hover {
+  opacity: 0.8; /* Меняет прозрачность при наведении */
 }
 
 .tool1-button:active,

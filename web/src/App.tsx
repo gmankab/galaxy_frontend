@@ -32,10 +32,12 @@ const App: React.FC = () => {
   const [userId, setUserId] = useState<number | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isVoiceOn, setIsVoiceOn] = useState<boolean>(true);
+  const [activeTouches, setActiveTouches] = useState<Set<number>>(new Set());
   const [isPlanetClicked] = useState<boolean>(false); // Новое состояние
   const horizontalMode: number = 1; // Set to 0 for vertical mode, 1 for horizontal
   const isPortrait: boolean = useOrientation(horizontalMode);
   const saveInterval = useRef<ReturnType<typeof setInterval> | null>(null);
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   useEffect(() => {
     console.log('Checking Telegram WebApp...');
@@ -121,6 +123,25 @@ const App: React.FC = () => {
     }
   };
 
+  const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
+    const newTouches = new Set(activeTouches);
+    for (let i = 0; i < event.touches.length; i++) {
+      newTouches.add(event.touches[i].identifier);
+    }
+    setActiveTouches(newTouches);
+  };
+
+  const handleTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
+    const newTouches = new Set(activeTouches);
+    for (let i = 0; i < event.changedTouches.length; i++) {
+      if (newTouches.has(event.changedTouches[i].identifier)) {
+        handlePlanetClick();
+        newTouches.delete(event.changedTouches[i].identifier);
+      }
+    }
+    setActiveTouches(newTouches);
+  };
+
   const handlePlanetClick = () => {
     if (planethp > 0) {
       setCount((prevCount) => prevCount + 1);
@@ -143,7 +164,7 @@ const App: React.FC = () => {
     }
   };
 
-  const handleTool3ButtonClick = () => {
+  const handleChangeButtonClick = () => {
     setPlanetImage((prevImage) =>
       prevImage === planetImageGreen ? planetImageBlue : planetImageGreen
     );
@@ -196,7 +217,6 @@ const App: React.FC = () => {
       ></div>
       <div
         className="tool3-button"
-        onClick={handleTool3ButtonClick}
         style={{ backgroundImage: `url(${tool3ButtonImage})` }}
       ></div>
       <div 
@@ -225,9 +245,16 @@ const App: React.FC = () => {
       </div>
       <div
         className={`planet ${isPlanetClicked ? 'clicked' : ''}`}
-        onClick={handlePlanetClick}
+        onClick={isMobile ? undefined : handlePlanetClick}
+        onTouchStart={isMobile ? handleTouchStart : undefined}
+        onTouchEnd={isMobile ? handleTouchEnd : undefined}
         style={{ backgroundImage: `url(${planetImage})` }}
       ></div>
+      <div 
+        className="test-button" 
+        onClick={handleChangeButtonClick} 
+        style={{ background: 'linear-gradient(to right, #ff7e5f, #feb47b)' }}
+      >test</div>
     </div>
   );
 };
