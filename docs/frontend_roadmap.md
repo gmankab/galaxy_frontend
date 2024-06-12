@@ -30,6 +30,12 @@
 - [x] bc7f1273 github actions auto deploy on github pages
 - [x] 63bcbbf7 & 092ed802 adaptation for phones
 - [x] 479cffc5 fix yarn build (does not import some files)
+- [x] 08bea0e1 fix menu
+- [x] c0729819 planet hp bar
+- [x] d792f794 add donation resource
+- [x] e6f698df enlargement of the planet
+- [x] d51463c6 multitouch
+- [x] d9519772 fix allocation
 - [ ] auto resource mining
 - [ ] start auto mining when the player exits
 - [ ] wallet/twitter tasks
