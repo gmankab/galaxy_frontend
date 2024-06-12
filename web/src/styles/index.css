@@ -47,9 +47,9 @@ html, body {
   user-select: none;
 }
 
-.level-container {
+.planet-hp-container {
   position: absolute;
-  top: 10px;
+  bottom: 10px;
   center: 10px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -59,15 +59,16 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: scaleY(-1);
 }
 
-.level {
+.planet-hp {
   position: absolute;
   color: white;
   font-size: 20px;
   top: 130px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scaleY(-1);
   font-weight: bold;
   user-select: none;
 }
@@ -83,7 +84,7 @@ html, body {
 
 .progress-bar {
   height: 100%;
-  background-color: green;
+  background-color: red;
   width: 0;
   transition: width 0.3s ease;
 }
@@ -316,13 +317,13 @@ html, body {
     bottom: 30px;
   }
 
-  .level-container {
-    top: 55px;
+  .planet-hp-container {
+    bottom: 55px;
     width: 150px; /* Adjust as needed */
     height: 150px; /* Adjust as needed */
   }
 
-  .level {
+  .planet-hp {
     font-size: 15px;
     top: 77px;
   }

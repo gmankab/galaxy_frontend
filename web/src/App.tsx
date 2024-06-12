@@ -16,7 +16,7 @@ import {
   tool1ButtonImage,
   tool2ButtonImage,
   tool3ButtonImage,
-  levelExpImage,
+  planetHpImage,
   resourseRareImage,
 } from './assets/images';
 import { useOrientation } from './useOrientation';
@@ -26,12 +26,12 @@ import api from './api';
 const App: React.FC = () => {
   const [planetImage, setPlanetImage] = useState<string>(planetImageGreen);
   const [count, setCount] = useState<number>(0);
-  const [level, setLevel] = useState<number>(0);
+  const [planethp, setPlanetHp] = useState<number>(10);
   const [clicksInInterval, setClicksInInterval] = useState<number>(0);
   const [userId, setUserId] = useState<number | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isVoiceOn, setIsVoiceOn] = useState<boolean>(true);
-  const [isPlanetClicked, setIsPlanetClicked] = useState<boolean>(false); // Новое состояние
+  const [isPlanetClicked] = useState<boolean>(false); // Новое состояние
   const horizontalMode: number = 1; // Set to 0 for vertical mode, 1 for horizontal
   const isPortrait: boolean = useOrientation(horizontalMode);
   const saveInterval = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -78,13 +78,22 @@ const App: React.FC = () => {
     }
   }, [userId, clicksInInterval]);
 
+  useEffect(() => {
+    const restoreHpInterval = setInterval(() => {
+      setPlanetHp((prevHp) => Math.min(10, prevHp + 1));
+    }, 5000);
+
+    return () => {
+      clearInterval(restoreHpInterval);
+    };
+  }, []);
+
   const fetchCoins = async (userId: number) => {
     try {
       const response = await api.get(`/coin/get?tg_id=${userId}`);
       const data = response.data;
       const coin = data.coins;
       setCount(coin);
-      setLevel(Math.floor(coin / 10));
     } catch (error) {
       console.error('Failed to fetch coins:', error);
     }
@@ -112,13 +121,11 @@ const App: React.FC = () => {
   };
 
   const handlePlanetClick = () => {
-    setCount((prevCount) => {
-      const newCount = prevCount + 1;
-      setLevel(Math.floor(newCount / 10));
-      return newCount;
-    });
-    setClicksInInterval(clicksInInterval + 1);
-    setIsPlanetClicked(true);
+    if (planethp > 0) {
+      setCount((prevCount) => prevCount + 1);
+      setClicksInInterval(clicksInInterval + 1);
+      setPlanetHp((prevHp) => prevHp - 1);
+    }
   };
 
   const toggleMenu = () => {
@@ -202,12 +209,12 @@ const App: React.FC = () => {
         <div className="counter">{count}</div>
       </div>
       <div 
-        className="level-container"
-        style={{ backgroundImage: `url(${levelExpImage})` }}
+        className="planet-hp-container"
+        style={{ backgroundImage: `url(${planetHpImage})` }}
       >
-        <div className="level">{level}</div>
+        <div className="planet-hp">{planethp}/10</div>
         <div className="progress-bar-container">
-          <div className="progress-bar" style={{ width: `${(count % 10) * 10}%` }}></div>
+          <div className="progress-bar" style={{ width: `${(planethp / 10) * 100}%` }}></div>
         </div>
       </div>
       <div
