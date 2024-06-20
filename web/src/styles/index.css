@@ -26,8 +26,8 @@ html, body {
 
 .counter-container {
   position: absolute;
-  top: 80px;
-  right: 10px;
+  top: 40px;
+  left: 10px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
