@@ -117,7 +117,6 @@ const App: React.FC = () => {
       const response = await api.get(`/coin/get?tg_id=${userId}`);
       const data = response.data;
       const coin = data.coins;
-      console.log(coin + "f" + cachedClicks);
       setCount(coin + cachedClicks);
     } catch (error) {
       console.error('Failed to fetch coins:', error);
