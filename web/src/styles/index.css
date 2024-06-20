@@ -74,7 +74,7 @@ html, body {
 
 .planet-hp-container {
   position: absolute;
-  bottom: 50px;
+  top: 50px;
   center: 10px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -84,16 +84,13 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: scaleY(-1);
 }
 
 .planet-hp {
   position: absolute;
   color: white;
   font-size: 15px;
-  top: 86px;
-  left: 50%;
-  transform: translateX(-50%) scaleY(-1);
+  top: 68px;
   font-weight: bold;
   user-select: none;
   user-drag: none;
@@ -101,12 +98,12 @@ html, body {
 }
 
 .progress-bar-container {
-  width: 93%;
+  width: 92%;
   height: 10px;
   background-color: #ddd;
   border-radius: 10px;
   overflow: hidden;
-  margin-top: -18px;
+  margin-top: 18px;
 }
 
 .progress-bar {
