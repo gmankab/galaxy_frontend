@@ -14,7 +14,7 @@ import autoButtonImage from './buttons/auto_button.svg';
 import tool1ButtonImage from './buttons/tool_1_button.svg';
 import tool2ButtonImage from './buttons/tool_2_button.svg';
 import tool3ButtonImage from './buttons/tool_3_button.svg';
-import planetHpImage from './planet_hp_info.svg';
+import planetHpImage from './planet_hp.svg';
 import resourceDonatonImage from './resourse_donation.svg'
 import resourseRareImage from './resourse_regular.svg'
 
