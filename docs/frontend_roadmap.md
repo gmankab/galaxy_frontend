@@ -41,6 +41,7 @@
 - [x] 4379538d add caching for interval clicking | 3h
 - [x] 3e5ffd8b remove test lefts | 1m
 - [x] 83269c85 update title of page | 1m
+- [x] b48245ab flipped the planet hp bar | 15m
 - [ ] auto resource mining
 - [ ] start auto mining when the player exits
 - [ ] wallet/twitter tasks
