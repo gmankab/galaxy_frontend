@@ -61,6 +61,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     if (userId !== null) {
+      saveCachedCoins(userId)
       fetchCoins(userId);
     }
   }, [userId]);
@@ -71,8 +72,9 @@ const App: React.FC = () => {
         if (clicksInInterval > 0) {
           saveCoins(userId, clicksInInterval);
           setClicksInInterval(0); // Reset the interval click counter after saving
+          cacheData("cache", {"clicksInInterval": 0});
         }
-      }, 10000);
+      }, 5000);
 
       return () => {
         if (saveInterval.current) {
@@ -164,6 +166,9 @@ const App: React.FC = () => {
       setCount((prevCount) => prevCount + 1);
       setClicksInInterval(clicksInInterval + 1);
       setPlanetHp((prevHp) => prevHp - 1);
+      cacheData("cache", {"clicksInInterval": clicksInInterval + 1});
+      const retrievedData = getFromLocalStorage("cache");
+      console.log(retrievedData)
     }
   };
 
@@ -185,6 +190,32 @@ const App: React.FC = () => {
     setPlanetImage((prevImage) =>
       prevImage === planetImageGreen ? planetImageBlue : planetImageGreen
     );
+  };
+
+  const saveCachedCoins = (userId: number) => {
+    var cachedClicks = getClicksInInterval()
+    if (cachedClicks != 0) {
+      saveCoins(userId, cachedClicks)
+      cacheData("cache", {"clicksInInterval": 0});
+    }
+  };
+
+  const getClicksInInterval = () => {
+    const cache = getFromLocalStorage("cache");
+    return cache.clicksInInterval
+  };
+  
+  const cacheData = (key: string, data: any) => {
+    saveToLocalStorage(key, data);
+};
+
+  const saveToLocalStorage = (key: string, data: any) => {
+    localStorage.setItem(key, JSON.stringify(data));
+  };
+
+  const getFromLocalStorage = (key: string): any => {
+    const data = localStorage.getItem(key);
+    return data ? JSON.parse(data) : null;
   };
 
   return (
