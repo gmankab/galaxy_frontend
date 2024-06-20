@@ -38,6 +38,9 @@
 - [x] d9519772 fix allocation
 - [x] 4e0d8a6c Expand the WebApp to full screen
 - [x] 30% done
+- [x] 4379538d add caching for interval clicking | 3h
+- [x] 3e5ffd8b remove test lefts | 1m
+- [x] 83269c85 update title of page | 1m
 - [ ] auto resource mining
 - [ ] start auto mining when the player exits
 - [ ] wallet/twitter tasks
