@@ -3,7 +3,7 @@
 1. install git and npx
 2.
 ```shell
-git clone https://gitlab.com/gmanka/galaxy_frontend
+git clone https://github.com/gmankab/galaxy_frontend
 cd galaxy_frontend/web
 npx yarn install
 npx yarn vite
