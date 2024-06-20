@@ -368,18 +368,18 @@ html, body {
   }
 
   .planet-hp-container {
-    bottom: 55px;
+    top: 55px;
     width: 150px; /* Adjust as needed */
     height: 150px; /* Adjust as needed */
   }
 
   .planet-hp {
     font-size: 15px;
-    top: 77px;
+    top: 60px;
   }
   .progress-bar-container {
     width: 92%;
     height: 10px;
-    margin-top: -15px;
+    margin-top: 15px;
   }
 }
