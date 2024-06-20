@@ -39,8 +39,9 @@ const App: React.FC = () => {
   const saveInterval = useRef<ReturnType<typeof setInterval> | null>(null);
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   const [, setPreloadedImages] = useState<{ [key: string]: string }>({});
-
+  
   useEffect(() => {
+    checkCookies("cache", {"clicksInInterval": 0})
     console.log('Checking Telegram WebApp...');
     if (window.Telegram && window.Telegram.WebApp) {
       console.log('Telegram WebApp found');
@@ -62,6 +63,7 @@ const App: React.FC = () => {
   useEffect(() => {
     if (userId !== null) {
       fetchCoins(userId);
+      saveCachedCoins(userId)  
     }
   }, [userId]);
 
@@ -71,6 +73,7 @@ const App: React.FC = () => {
         if (clicksInInterval > 0) {
           saveCoins(userId, clicksInInterval);
           setClicksInInterval(0); // Reset the interval click counter after saving
+          cacheData("cache", {"clicksInInterval": 0});
         }
       }, 10000);
 
@@ -110,10 +113,12 @@ const App: React.FC = () => {
 
   const fetchCoins = async (userId: number) => {
     try {
+      const cachedClicks = getClicksInInterval()
       const response = await api.get(`/coin/get?tg_id=${userId}`);
       const data = response.data;
       const coin = data.coins;
-      setCount(coin);
+      console.log(coin + "f" + cachedClicks);
+      setCount(coin + cachedClicks);
     } catch (error) {
       console.error('Failed to fetch coins:', error);
     }
@@ -164,6 +169,9 @@ const App: React.FC = () => {
       setCount((prevCount) => prevCount + 1);
       setClicksInInterval(clicksInInterval + 1);
       setPlanetHp((prevHp) => prevHp - 1);
+      cacheData("cache", {"clicksInInterval": clicksInInterval + 1});
+      const retrievedData = getFromLocalStorage("cache");
+      console.log(retrievedData)
     }
   };
 
@@ -185,6 +193,39 @@ const App: React.FC = () => {
     setPlanetImage((prevImage) =>
       prevImage === planetImageGreen ? planetImageBlue : planetImageGreen
     );
+  };
+
+  const saveCachedCoins = (userId: number) => {
+    var cachedClicks = getClicksInInterval()
+    if (cachedClicks != 0) {
+      saveCoins(userId, cachedClicks)
+      cacheData("cache", {"clicksInInterval": 0});
+    }
+  };
+
+  const getClicksInInterval = () => {
+    const cache = getFromLocalStorage("cache");
+    return cache.clicksInInterval
+  };
+  
+  const cacheData = (key: string, data: any) => {
+    saveToLocalStorage(key, data);
+};
+
+  const checkCookies = (key: string, data: any) => {
+    if (getFromLocalStorage(key) == null) {
+      console.log("Cookies are not found, creating new one")
+      cacheData(key, data);
+    }
+  } 
+
+  const saveToLocalStorage = (key: string, data: any) => {
+    localStorage.setItem(key, JSON.stringify(data));
+  };
+
+  const getFromLocalStorage = (key: string): any => {
+    const data = localStorage.getItem(key);
+    return data ? JSON.parse(data) : null;
   };
 
   return (
