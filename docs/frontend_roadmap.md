@@ -42,18 +42,22 @@
 - [x] 3e5ffd8b remove test lefts | 1m
 - [x] 83269c85 update title of page | 1m
 - [x] b48245ab flipped the planet hp bar | 15m
-- [ ] auto resource mining
-- [ ] start auto mining when the player exits
-- [ ] wallet/twitter tasks
+- [ ] main screen new design
+- [ ] each button tap and planet tab should vibrate
+- [ ] automining
+- [ ] clans: create
+- [ ] clans: player rank number
+- [ ] clans: moderation
+- [ ] clans: inviting members
+- [ ] clans: removing members
+- [ ] sector and bpanet choose
+- [ ] animations: taps count and resource icon when tap on planet
 - [ ] animations: universe
 - [ ] animations: planet movement in the planet selection window
 - [ ] animations: clicking on the planet to mine resources
 - [ ] animations: flying ship around planet
-- [ ] shop: purchase pop-up window
 - [ ] back button that opens planet choosing page
 - [ ] resource progress bar
-- [ ] sectors main page
-- [ ] sectors unlocking
 - [ ] bonuses button
 - [ ] fields for the player's resource count
 - [ ] storage
@@ -72,15 +76,7 @@
 - [ ] twitter: subscription
 - [ ] twitter: verification of subscription linked to player's account
 - [ ] twitter: retweet of a post and checking the retweet on the player's twitter account
-- [ ] clans: create
-- [ ] clans: raiting
-- [ ] clans: player rank number
-- [ ] clans: moderation
-- [ ] clans: inviting members
-- [ ] clans: removing members
-- [ ] clans: ranking algorithms
-- [ ] clans: ranking system
-- [ ] clans: ranking table
+- [ ] shop: purchase pop-up window
 - [ ] shop: crediting purchased rare resources to the player
 - [ ] shop: payment for purchases
 - [ ] shop: verification of completed payment
