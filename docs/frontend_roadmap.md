@@ -82,4 +82,3 @@
 - [ ] shop: verification of completed payment
 - [ ] start auto mining when the player exits
 - [ ] end auto mining when the maximum time is reached
-
