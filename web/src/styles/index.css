@@ -222,6 +222,10 @@ html, body {
   bottom: 130px;
 }
 
+.auto-button.active {
+  background-color: green;
+}
+
 .tool1-button {
   width: 80px;
   height: 80px;

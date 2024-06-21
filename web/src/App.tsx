@@ -12,7 +12,6 @@ import {
   walletButtonImage,
   giftButtonImage,
   clansButtonImage,
-  autoButtonImage,
   tool1ButtonImage,
   tool2ButtonImage,
   tool3ButtonImage,
@@ -23,6 +22,7 @@ import {
 import { useOrientation } from './useOrientation';
 import OrientationWarning from './OrientationWarning';
 import api from './api';
+import AutoButton from './components/AutoButton';
 
 const App: React.FC = () => {
   const [planetImage, setPlanetImage] = useState<string>(planetImageGreen);
@@ -131,15 +131,6 @@ const App: React.FC = () => {
     }
   };
 
-  const autoClick = async (userId: number) => {
-    try {
-      await api.get(`/coin/autoclick?tg_id=${userId}`);
-      console.log(`Autoclick run for ${userId}!`)
-    } catch (error) {
-      console.log('Failed to autoclick run:', error);
-    }
-  };
-
   const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
     const newTouches = new Set(activeTouches);
     for (let i = 0; i < event.touches.length; i++) {
@@ -173,12 +164,6 @@ const App: React.FC = () => {
 
   const toggleVoice = () => {
     setIsVoiceOn(!isVoiceOn);
-  };
-
-  const handleAutoButtonClick = () => {
-    if (userId !== null) {
-      autoClick(userId);
-    }
   };
 
   const handleChangeButtonClick = () => {
@@ -236,11 +221,7 @@ const App: React.FC = () => {
         className="tool3-button"
         style={{ backgroundImage: `url(${tool3ButtonImage})` }}
       ></div>
-      <div 
-        className="auto-button"
-        onClick={handleAutoButtonClick}
-        style={{ backgroundImage: `url(${autoButtonImage})` }}
-      ></div>
+      <AutoButton userId={userId} handlePlanetClick={handlePlanetClick} planethp={planethp} />
       <div
         className="donation-container"
         style={{ backgroundImage: `url(${resourceDonatonImage})` }}>
