@@ -50,7 +50,7 @@
 - [ ] clans: moderation
 - [ ] clans: inviting members
 - [ ] clans: removing members
-- [ ] sector and bpanet choose
+- [ ] sector and panet choose
 - [ ] animations: taps count and resource icon when tap on planet
 - [ ] animations: universe
 - [ ] animations: planet movement in the planet selection window
