@@ -21,6 +21,7 @@ import {
   resourseRareImage,
   toolUpgradeButtonImage,
 } from './assets/images';
+import ClansMenu from './ClansMenu'; // Импортируем новый компонент
 import { useOrientation } from './useOrientation';
 import OrientationWarning from './OrientationWarning';
 import api from './api';
@@ -33,6 +34,7 @@ const App: React.FC = () => {
   const [userId, setUserId] = useState<number | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isVoiceOn, setIsVoiceOn] = useState<boolean>(true);
+  const [isClansMenuOpen, setIsClansMenuOpen] = useState<boolean>(false); // Состояние для меню кланов
   const [activeTouches, setActiveTouches] = useState<Set<number>>(new Set());
   const [isPlanetClicked] = useState<boolean>(false); // Новое состояние
   const horizontalMode: number = 1; // Set to 0 for vertical mode, 1 for horizontal
@@ -228,6 +230,14 @@ const App: React.FC = () => {
     return data ? JSON.parse(data) : null;
   };
 
+  const openClansMenu = () => {
+    setIsClansMenuOpen(true);
+  };
+
+  const closeClansMenu = () => {
+    setIsClansMenuOpen(false);
+  };
+
   return (
     <div id="app">
       {horizontalMode === 0 && !isPortrait && <OrientationWarning />}
@@ -261,8 +271,9 @@ const App: React.FC = () => {
         className="gift-button"
         style={{ backgroundImage: `url(${giftButtonImage})` }}
       ></div>
-      <div 
+      <div
         className="clans-button"
+        onClick={openClansMenu} // Добавляем обработчик нажатия
         style={{ backgroundImage: `url(${clansButtonImage})` }}
       ></div>
       <div
@@ -274,14 +285,14 @@ const App: React.FC = () => {
       </div>
       <div
         className="tool2-button"
-        style={{ backgroundImage: `url(${tool1ButtonImage})` }}
+        style={{ backgroundImage: `url(${tool2ButtonImage})` }}
       ><div className="tool2-upgrade"
         style={{ backgroundImage: `url(${toolUpgradeButtonImage})` }}
         ></div>
       </div>
       <div
         className="tool3-button"
-        style={{ backgroundImage: `url(${tool1ButtonImage})` }}
+        style={{ backgroundImage: `url(${tool3ButtonImage})` }}
       ><div className="tool3-upgrade"
         style={{ backgroundImage: `url(${toolUpgradeButtonImage})` }}
         ></div>
@@ -322,6 +333,7 @@ const App: React.FC = () => {
         onClick={handleChangeButtonClick} 
         style={{ background: 'linear-gradient(to right, #ff7e5f, #feb47b)' }}
       >test</div>
+      {isClansMenuOpen && <ClansMenu onClose={closeClansMenu} />} {/* Вставляем меню кланов */}
     </div>
   );
 };
