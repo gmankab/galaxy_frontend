@@ -19,6 +19,7 @@ import {
   planetHpImage,
   resourceDonatonImage,
   resourseRareImage,
+  toolUpgradeButtonImage,
 } from './assets/images';
 import { useOrientation } from './useOrientation';
 import OrientationWarning from './OrientationWarning';
@@ -267,15 +268,24 @@ const App: React.FC = () => {
       <div
         className="tool1-button"
         style={{ backgroundImage: `url(${tool1ButtonImage})` }}
-      ></div>
+      ><div className="tool1-upgrade"
+        style={{ backgroundImage: `url(${toolUpgradeButtonImage})` }}
+        ></div>
+      </div>
       <div
         className="tool2-button"
-        style={{ backgroundImage: `url(${tool2ButtonImage})` }}
-      ></div>
+        style={{ backgroundImage: `url(${tool1ButtonImage})` }}
+      ><div className="tool2-upgrade"
+        style={{ backgroundImage: `url(${toolUpgradeButtonImage})` }}
+        ></div>
+      </div>
       <div
         className="tool3-button"
-        style={{ backgroundImage: `url(${tool3ButtonImage})` }}
-      ></div>
+        style={{ backgroundImage: `url(${tool1ButtonImage})` }}
+      ><div className="tool3-upgrade"
+        style={{ backgroundImage: `url(${toolUpgradeButtonImage})` }}
+        ></div>
+      </div>
       <div 
         className="auto-button"
         onClick={handleAutoButtonClick}
