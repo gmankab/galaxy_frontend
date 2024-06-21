@@ -15,10 +15,15 @@ import tool1ButtonImage from './buttons/tool_1_button.svg';
 import tool2ButtonImage from './buttons/tool_2_button.svg';
 import tool3ButtonImage from './buttons/tool_3_button.svg';
 import planetHpImage from './planet_hp.svg';
-import resourceDonatonImage from './resourse_donation.svg'
-import resourseRareImage from './resourse_regular.svg'
-import toolUpgradeButtonImage from './upgrade_tool_button.svg'
-
+import resourceDonatonImage from './resourse_donation.svg';
+import resourseRareImage from './resourse_regular.svg';
+import toolUpgradeButtonImage from './upgrade_tool_button.svg';
+import clansMenuImage from './clans_menu_background.svg';
+import backButtonImage from './buttons/back_button.svg';
+import clansWallImage from './clan_wall.svg';
+import bottomMenuImage from './bottom_menu.svg';
+import mapButtonImage from './buttons/map_button.svg';
+import clanSearchImage from './clan_search.svg'
 export {
   planetImageGreen,
   planetImageBlue,
@@ -39,5 +44,11 @@ export {
   resourceDonatonImage,
   resourseRareImage,
   toolUpgradeButtonImage,
+  clansMenuImage,
+  backButtonImage,
+  clansWallImage,
+  bottomMenuImage,
+  mapButtonImage,
+  clanSearchImage,
 };
 
