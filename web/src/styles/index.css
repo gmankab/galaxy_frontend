@@ -368,49 +368,110 @@ html, body {
   transform: scale(0.9); /* Scale down the button when it is active (clicked) */
 }
 
-/* Медиа-запросы для экранов высотой от 481 до 767 пикселей */
-@media only screen  and (max-height: 481px) {
-  .planet {
-    width: 150px;
-    height: 150px;
-  }
-  .shop-button {
-    left: 90px;
-    top: 10px;
-  }
-
-  .gift-button {
-    right: 90px;
-    top: 10px;
-  }
-  .tool1-button {
-    left: 20px;
-    bottom: 30px;
-  }
-
-  .tool2-button {
-    center: 10px;
-    bottom: 30px;
-  }
-
-  .tool3-button {
-    right: 20px;
-    bottom: 30px;
-  }
-
-  .planet-hp-container {
-    top: 55px;
-    width: 150px; /* Adjust as needed */
-    height: 150px; /* Adjust as needed */
-  }
-
-  .planet-hp {
-    font-size: 15px;
-    top: 60px;
-  }
-  .progress-bar-container {
-    width: 92%;
-    height: 10px;
-    margin-top: 15px;
-  }
+.clans-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  z-index: 1002;
+  width: 100%; /* Установите желаемый размер меню */
+  height: 100%;
 }
+
+.clans-wall {
+  position: fixed;
+  top: 350px;
+  left: 50%;
+  width: 300px; /* Установите желаемый размер фона */
+  height: 600px;
+  background-size: contain;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(-50%, -50%);
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 1003; /* Убедитесь, что кнопка выше меню */
+}
+
+.back-button:active {
+  transform: scale(0.9); /* Эффект при нажатии */
+}
+
+.bottom-menu {
+  position: absolute; /* Используем absolute, чтобы зафиксировать меню внизу */
+  bottom: 0;
+  width: 100%;
+  height: 50px; /* Установите нужную высоту */
+  background: none; /* Убедитесь, что фон прозрачный */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1003; /* Убедитесь, что меню выше всех других элементов */
+}
+
+.bottom-menu-image {
+  width: 100%; /* Установите желаемый размер меню */
+  height: auto;
+  position: relative;
+}
+
+.map-button {
+  position: absolute;
+  bottom: 10px;
+  center: 50%;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 1003; /* Убедитесь, что кнопка выше меню */
+}
+
+.map-button:active {
+  transform: scale(0.9); /* Эффект при нажатии */
+}
+
+.clan-search {
+  position: fixed; /* Фиксированное позиционирование */
+  top: 80px; /* Отступ сверху 50% от высоты экрана */
+  left: 50%; /* Отступ слева 50% от ширины экрана */
+  width: 200px; /* Ширина строки поиска */
+  height: 40px; /* Высота строки поиска */
+  transform: translate(-50%, -50%); /* Сдвигаем элемент на половину его ширины и высоты */
+  border: none; /* Убираем границу */
+  outline: none; /* Убираем обводку */
+  background-size: contain; /* Размер фона */
+  background-repeat: no-repeat; /* Фон без повторений */
+  cursor: pointer; /* Курсор указателя при наведении */
+  z-index: 1003; /* Z-index */
+  color: white; /* Цвет текста */
+  background-color: rgba(0, 0, 0, 0); /* Прозрачный фон */
+  padding-left: 50px; /* Отступ для текста */
+  font-size: 16px; /* Размер шрифта */
+  border-radius: 5px; /* Сглаживание углов */
+}
+
+
+
