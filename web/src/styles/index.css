@@ -169,7 +169,9 @@ html, body {
   width: 80%;
   max-width: 300px;
 }
-
+.tool1-upgrade,
+.tool2-upgrade,
+.tool3-upgrade,
 .test-button,
 .menu-button,
 .tool1-button,
@@ -240,6 +242,21 @@ html, body {
   bottom: 30px;
 }
 
+.tool1-upgrade {
+  right: 10px;
+  bottom: 50px;
+}
+
+.tool2-upgrade {
+  right: 10px;
+  bottom: 50px;
+}
+
+.tool3-upgrade {
+  right: 10px;
+  bottom: 50px;
+}
+
 .test-button {
   width: 30px;
   height: 30px;
@@ -294,6 +311,20 @@ html, body {
 
 .menu.hidden {
   display: none; /* Hide when menu is closed */
+}
+
+ {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 1001; /* Ensure the button is above other elements */
+  transition: transform 0.1s ease; /* Smooth transition for the scaling effect */
+  -webkit-tap-highlight-color: transparent; /* Removing selection on mobile devices */
+  -webkit-user-select: none;
 }
 
 .voice-toggle,
