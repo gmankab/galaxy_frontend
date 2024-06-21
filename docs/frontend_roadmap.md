@@ -42,6 +42,9 @@
 - [x] 3e5ffd8b remove test lefts | 1m
 - [x] 83269c85 update title of page | 1m
 - [x] b48245ab flipped the planet hp bar | 15m
+- [x] bcfa96c2 add upgrade tools buttons | 20m
+- [x] 3c7ce96d clans: main menu | 3h
+- [x] 3a6bc43f add bottom menu | 1.5h
 - [ ] main screen new design
 - [ ] each button tap and planet tab should vibrate
 - [ ] automining
