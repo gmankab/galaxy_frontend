@@ -1,0 +1,21 @@
+.member {
+  border-radius: 19px;
+  padding: 11px 46px 11px 20px;
+  width: calc(100%-24px);
+  background-color: #3b5b96;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.lf_part {
+  display: flex;
+  align-items: center;
+}
+.name_id {
+  margin-left: 16px;
+  font-size: 14px;
+}
+.count {
+  font-size: 11px;
+}
