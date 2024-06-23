@@ -1,17 +1,16 @@
-### how to run frontend
+### how to run frontend for development
 
-1. install git and npx
-2.
+1. install git and nodejs (with corepack)
+2. open vscode
+3.
+
 ```shell
-git clone https://github.com/gmankab/galaxy_frontend
-cd galaxy_frontend/web
-npx yarn install
-npx yarn vite
+$ git clone https://github.com/gmankab/galaxy_frontend -b dev
+$ cd galaxy_frontend
+$ pnpm install --frozen-lockfile
+$ pnpm run dev
 ```
-3. open `http://127.0.0.1:5173` in browser
-
 
 ### auto deploy
 
-on each commit frontend automatically deploys on https://gmanka.gitlab.io/galaxy_frontend
-
+on each commit frontend automatically deploys on https://gmankab.github.io/galaxy_frontend

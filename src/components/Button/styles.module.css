@@ -1,0 +1,12 @@
+.base {
+  padding: 0;
+  border: none;
+  outline: none;
+  position: absolute;
+  background: none no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+  z-index: 1001; /* Ensure the button is above other elements */
+  transition: transform 0.1s ease; /* Smooth transition for the scaling effect */
+}

@@ -1,0 +1,36 @@
+.base:active {
+  transform: scale(0.9); /* Scale down the button when it is active (clicked) */
+}
+
+.voice-toggle {
+  top: 75px;
+  left: 2px;
+  width: 160px;
+  height: 50px;
+}
+
+.connect-twitter {
+  top: 120px;
+  left: 2px;
+  width: 160px;
+  height: 50px;
+
+  background-image: url('@/assets/buttons/connct_x.svg');
+}
+
+.connect-wallet {
+  top: 165px;
+  left: 2px;
+  width: 160px;
+  height: 50px;
+
+  background-image: url('@/assets/buttons/connect_wallet.svg');
+}
+
+.voice-toggle.on {
+  background-image: url('@/assets/buttons/voice_on.svg');
+}
+
+.voice-toggle.off {
+  background-image: url('@/assets/buttons/voice_off.svg');
+}

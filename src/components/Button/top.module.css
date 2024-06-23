@@ -1,0 +1,45 @@
+.base {
+  width: 60px;
+  height: 60px;
+}
+
+.base:active {
+  transform: scale(0.9);
+}
+
+.menu {
+  top: 10px;
+  left: 10px;
+
+  background-image: url('@/assets/buttons/menu_button.svg');
+}
+
+.menu.off {
+  transform: none;
+}
+
+.menu.on {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.shop {
+  left: 105px;
+  top: 10px;
+
+  background-image: url('@/assets/buttons/shop_button.svg');
+}
+
+.gift {
+  right: 105px;
+  top: 10px;
+
+  background-image: url('@/assets/buttons/gift_button.svg');
+}
+
+.clans {
+  right: 10px;
+  top: 10px;
+
+  background-image: url('@/assets/buttons/clans_button.svg');
+}

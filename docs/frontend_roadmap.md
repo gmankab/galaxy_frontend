@@ -45,6 +45,8 @@
 - [x] bcfa96c2 add upgrade tools buttons | 20m
 - [x] 3c7ce96d clans: main menu | 3h
 - [x] 3a6bc43f add bottom menu | 1.5h
+- [x] refactor frontend (partial) | 2d
+- [ ] remake main screen
 - [ ] main screen new design
 - [ ] each button tap and planet tab should vibrate
 - [ ] automining

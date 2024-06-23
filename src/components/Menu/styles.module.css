@@ -1,0 +1,22 @@
+.base {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000; /* Ensure the menu is above other elements */
+  flex-direction: column;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-items: center;
+  display: block; /* Show when menu is open */
+}
+
+.base.off {
+  display: none; /* Hide when menu is closed */
+}
+
+.bg {
+  width: 165px; /* Adjust as needed */
+
+  content: url('@/assets/opened_menu.svg');
+}

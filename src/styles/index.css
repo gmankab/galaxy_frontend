@@ -1,0 +1,327 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+}
+
+#root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('@/assets/background/purple.svg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.counter-container {
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 120px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  right: 15px;
+  font-weight: bold;
+}
+
+.donation-container {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.donation {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  right: 15px;
+  font-weight: bold;
+}
+
+.planet-hp-container {
+  position: absolute;
+  top: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 170px; /* Adjust as needed */
+  height: 170px; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.planet-hp {
+  position: absolute;
+  color: white;
+  font-size: 15px;
+  top: 68px;
+  font-weight: bold;
+}
+
+.progress-bar-container {
+  width: 92%;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 18px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: red;
+  width: 0;
+  transition: width 0.3s ease;
+}
+.user-id {
+  position: absolute;
+  bottom: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  font-size: 20px;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out;
+}
+
+.planet {
+  width: 300px;
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  position: fixed;
+  transition: transform 0.2s;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) translateY(-20px);
+}
+
+.planet:active {
+  transform: translate(-50%, -50%) translateY(-20px) scale(0.9); /* Merging transformations */
+}
+
+.tool1-upgrade,
+.tool2-upgrade,
+.tool3-upgrade,
+.test-button,
+.tool1-button,
+.tool2-button,
+.tool3-button,
+.auto-button {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 1001; /* Ensure the button is above other elements */
+  transition: transform 0.1s ease; /* Smooth transition for the scaling effect */
+}
+
+.auto-button {
+  width: 90px;
+  height: 50px;
+  right: 10px;
+  bottom: 130px;
+}
+
+.tool1-button,
+.tool2-button,
+.tool3-button {
+  width: 80px;
+  height: 80px;
+  bottom: 30px;
+}
+
+.tool1-button {
+  left: 40px;
+}
+
+.tool3-button {
+  right: 40px;
+}
+
+.tool1-upgrade {
+  right: 10px;
+  bottom: 50px;
+}
+
+.tool2-upgrade {
+  right: 10px;
+  bottom: 50px;
+}
+
+.tool3-upgrade {
+  right: 10px;
+  bottom: 50px;
+}
+
+.test-button {
+  width: 30px;
+  height: 30px;
+  left: 10px;
+  opacity: 0;
+}
+
+.test-button:hover {
+  opacity: 0.8; /* Меняет прозрачность при наведении */
+}
+
+.tool1-button:active,
+.tool2-button:active,
+.tool3-button:active,
+.auto-button:active,
+.shop-button:active,
+.gift-button:active,
+.clans-button:active {
+  transform: scale(0.9); /* Scale down the button when it is active (clicked) */
+}
+
+.menu-button.hidden {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.clans-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  z-index: 1002;
+  width: 100%; /* Установите желаемый размер меню */
+  height: 100%;
+}
+
+.clans-wall {
+  position: fixed;
+  top: 350px;
+  left: 50%;
+  width: 300px; /* Установите желаемый размер фона */
+  height: 600px;
+  background-size: contain;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(-50%, -50%);
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 1003; /* Убедитесь, что кнопка выше меню */
+}
+
+.back-button:active {
+  transform: scale(0.9); /* Эффект при нажатии */
+}
+
+.bottom-menu {
+  position: absolute; /* Используем absolute, чтобы зафиксировать меню внизу */
+  bottom: 0;
+  width: 100%;
+  height: 50px; /* Установите нужную высоту */
+  background: none; /* Убедитесь, что фон прозрачный */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1003; /* Убедитесь, что меню выше всех других элементов */
+}
+
+.bottom-menu-image {
+  width: 100%; /* Установите желаемый размер меню */
+  height: auto;
+  position: relative;
+}
+
+.map-button {
+  position: absolute;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 1003; /* Убедитесь, что кнопка выше меню */
+}
+
+.map-button:active {
+  transform: scale(0.9); /* Эффект при нажатии */
+}
+
+.clan-search {
+  position: fixed; /* Фиксированное позиционирование */
+  top: 80px; /* Отступ сверху 50% от высоты экрана */
+  left: calc(
+    50% + 2%
+  ); /* Отступ слева 50% от ширины экрана, 2% это егролям момент */
+  width: 200px; /* Ширина строки поиска */
+  height: 40px; /* Высота строки поиска */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Сдвигаем элемент на половину его ширины и высоты */
+  border: none; /* Убираем границу */
+  outline: none; /* Убираем обводку */
+  background-size: contain; /* Размер фона */
+  background-repeat: no-repeat; /* Фон без повторений */
+  cursor: pointer; /* Курсор указателя при наведении */
+  z-index: 1003; /* Z-index */
+  color: white; /* Цвет текста */
+  background-color: rgba(0, 0, 0, 0); /* Прозрачный фон */
+  padding-left: 50px; /* Отступ для текста */
+  font-size: 16px; /* Размер шрифта */
+  border-radius: 5px; /* Сглаживание углов */
+}
