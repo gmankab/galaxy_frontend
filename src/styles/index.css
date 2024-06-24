@@ -326,10 +326,10 @@
   border-radius: 5px; /* Сглаживание углов */
 }
 
-.sector-picker{
+.sector-picker {
   width: 100%;
   height: 100%;
-  background-color: #141F33;
+  background-color: #141f33;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -340,7 +340,7 @@
   z-index: 1002;
 }
 
-.sector-picker-container{
+.sector-picker-container {
   margin-top: 40px;
   gap: 38px;
   display: flex;
@@ -350,6 +350,6 @@
   color: #fff;
 }
 
-.sector-picker-container object{
+.sector-picker-container object {
   width: 100%;
 }

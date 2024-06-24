@@ -25,7 +25,6 @@ import mapButtonImage from './buttons/map_button.svg';
 import clanSearchImage from './clan_search.svg';
 import sectors_map from './sectors_map.svg';
 
-
 export {
   planetImageGreen,
   planetImageBlue,
@@ -52,5 +51,5 @@ export {
   bottomMenuImage,
   mapButtonImage,
   clanSearchImage,
-  sectors_map
+  sectors_map,
 };

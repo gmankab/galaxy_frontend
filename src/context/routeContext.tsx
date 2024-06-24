@@ -1,6 +1,6 @@
 import { FC, ReactNode, createContext, useState } from 'react';
 
-export type PageType = 'main' | 'shop' | 'rang' | 'bonus' | 'clans' | 'clan' | 'clan_create';
+export type PageType = 'main' | 'shop' | 'rang' | 'bonus' | 'clans' | 'clan' | 'clan_create' | 'sector';
 export interface IRouteContext {
   page: PageType;
   setPage: React.Dispatch<React.SetStateAction<PageType>>;

@@ -3,7 +3,7 @@ import '@/styles/index.css';
 import { ClanPage } from './components/ClanPage';
 import { ClansMenu } from './components/ClansMenu';
 import { ClanCreate } from './components/ClanCreate';
-import { SectorPicker } from "./components/SectorPicker";
+import { SectorPicker } from './components/SectorPicker';
 
 import { api } from '@/api';
 import { useToggle } from '@/hooks/useToggle';
@@ -312,9 +312,7 @@ export function App() {
       {page === 'clan' && <ClanPage />}
       {page === 'clans' && <ClansMenu />}
       {page === 'clan_create' && <ClanCreate />}
-      {page==='sector'&&<SectorPicker/>}
-      
-      {/* <Menu/> */}
+      {page === 'sector' && <SectorPicker />}
     </>
   );
 };
