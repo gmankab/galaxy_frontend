@@ -1,6 +1,8 @@
-import { TouchEvent, useCallback, useEffect, useRef, useState } from 'react';
+import { TouchEvent, useCallback, useContext, useEffect, useRef, useState } from 'react';
 import '@/styles/index.css';
+import { ClanPage } from './components/ClanPage';
 import { ClansMenu } from './components/ClansMenu';
+import { ClanCreate } from './components/ClanCreate';
 import { SectorPicker } from "./components/SectorPicker";
 
 import { api } from '@/api';
@@ -21,6 +23,7 @@ import { useOrientation } from '@/hooks/useOrientation';
 import { OrientationWarning } from '@/components/OrientationWarning';
 import { Menu } from '@/components/Menu';
 import { Button } from '@/components/Button';
+import { IRouteContext, RouteContext } from '@/context/routeContext';
 
 function getFromLocalStorage<T>(key: string): T {
   const data = localStorage.getItem(key);
@@ -77,13 +80,13 @@ function saveCachedCoins(userId: number) {
 };
 
 export function App() {
+  const { page, setPage } = useContext(RouteContext) as IRouteContext;
   const [planetImage, setPlanetImage] = useState(planetImageGreen);
   const [count, setCount] = useState(0);
   const [planethp, setPlanetHp] = useState(50);
   const [clicksInInterval, setClicksInInterval] = useState(0);
   const [userId, setUserId] = useState<number | null>(null);
   const [isVoiceOn, toggleVoiceOn] = useToggle(true);
-  const [isClansMenuOpen, setIsClansMenuOpen] = useState(false); // Состояние для меню кланов
   const [activeTouches, setActiveTouches] = useState(new Set<number>());
   const [isPlanetClicked] = useState(false); // TODO
   const saveInterval = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -91,9 +94,6 @@ export function App() {
 
   const orientation = useOrientation();
   const [horizontalMode, setHorizontalMode] = useState(false);
-
-  const [isSectorOpen, setIsSectorOpen] = useState(false);
-
 
   useEffect(() => {
     switch (orientation.type) {
@@ -231,16 +231,12 @@ export function App() {
         </>
       )}
       />
-      <Button
-          variant='top'
-          intent='shop'
-          onClick={() => setIsSectorOpen(true)}
-      />
+      <Button variant='top' intent='shop' />
       <Button variant='top' intent='gift' />
       <Button
         variant='top'
         intent='clans'
-        onClick={() => setIsClansMenuOpen(true)}
+        onClick={() => setPage('clans')}
       />
       <div
         className='tool1-button'
@@ -313,8 +309,12 @@ export function App() {
       >
         test
       </div>
-      {isClansMenuOpen && <ClansMenu onClose={() => setIsClansMenuOpen(false)} />}
-      {isSectorOpen && <SectorPicker onClose={() => setIsSectorOpen(false)} />}
+      {page === 'clan' && <ClanPage />}
+      {page === 'clans' && <ClansMenu />}
+      {page === 'clan_create' && <ClanCreate />}
+      {page==='sector'&&<SectorPicker/>}
+      
+      {/* <Menu/> */}
     </>
   );
 };

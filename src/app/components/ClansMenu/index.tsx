@@ -1,12 +1,10 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { clanSearchImage, clansMenuImage, clansWallImage } from '@/assets/images';
 import { BottomMenu } from '@/components/BottomMenu';
+import { IRouteContext, RouteContext } from '@/context/routeContext';
 
-export interface ClansMenuProps {
-  onClose: () => void;
-}
-
-export function ClansMenu({ onClose }: ClansMenuProps) {
+export function ClansMenu() {
+  const { setPage } = useContext(RouteContext) as IRouteContext;
   const [searchText, setSearchText] = useState('');
 
   return (
@@ -23,7 +21,7 @@ export function ClansMenu({ onClose }: ClansMenuProps) {
         <img src={clansMenuImage} alt='Clans Menu' className='clans-menu-image' />
       </div>
       <div className='clans-wall' style={{ backgroundImage: `url("${clansWallImage}")` }}></div>
-      <BottomMenu onMapButtonClick={onClose} />
+      <BottomMenu onMapButtonClick={() => setPage('main')} />
     </div>
   );
 };
