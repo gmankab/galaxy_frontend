@@ -35,56 +35,59 @@ export function ClanCreate() {
         >
           Choose name:
         </span>
-        <input type='text' className={css.enter_name} value={clan_name}onChange={(e)=>setClanName(e.target.value)} placeholder='Click here to name your clan' />
+        <input type='text' className={css.enter_name} value={clan_name}onChange={e => setClanName(e.target.value)} placeholder='Click here to name your clan' />
         <span style={{
-          fontSize:'13px'
-        }}>Create logo:</span>
-         <div className={css.avatar}>
-          <img className={css.border}/>
-          <img className={css.ellipse}/>
-          <img className={css.shape}  />
+          fontSize: '13px',
+        }}
+        >
+          Create logo:
+        </span>
+        <div className={css.avatar}>
+          <img className={css.border} />
+          <img className={css.ellipse} />
+          <img className={css.shape} />
           <img className={css.figure} />
         </div>
         <div className={css.edit_block}>
-          <div className={css.block }>
-              <div className={`${css.edit_elem} ${css.active}`}>
-                <img className={css.shape0}  />
-              </div>
-              <div className={css.edit_elem}>
-                <img className={css.shape1}  />
-              </div>
-              <div className={css.edit_elem}>
-                <img className={css.shape2}  />
-              </div>
-              <div className={css.edit_elem}>
-                <img className={css.shape3}  />
-              </div>
-              <div className={css.edit_elem}>
-                <img className={css.shape4}  />
-              </div>
+          <div className={css.block}>
+            <div className={`${css.edit_elem} ${css.active}`}>
+              <img className={css.shape0} />
+            </div>
+            <div className={css.edit_elem}>
+              <img className={css.shape1} />
+            </div>
+            <div className={css.edit_elem}>
+              <img className={css.shape2} />
+            </div>
+            <div className={css.edit_elem}>
+              <img className={css.shape3} />
+            </div>
+            <div className={css.edit_elem}>
+              <img className={css.shape4} />
+            </div>
           </div>
-          <div className={css.block }>
-              <div className={css.edit_elem}>
-                <img className={css.color0}  />
-              </div>
-              <div className={css.edit_elem}>
-                <img className={css.color1}  />
-              </div>
-              <div className={css.edit_elem}>
-                <img className={css.color2}  />
-              </div>
-              <div className={`${css.edit_elem} ${css.active}`}>
-                <img className={css.color3}  />
-              </div>
-              <div className={css.edit_elem}>
-                <img className={css.color4}  />
-              </div>
-             
+          <div className={css.block}>
+            <div className={css.edit_elem}>
+              <img className={css.color0} />
+            </div>
+            <div className={css.edit_elem}>
+              <img className={css.color1} />
+            </div>
+            <div className={css.edit_elem}>
+              <img className={css.color2} />
+            </div>
+            <div className={`${css.edit_elem} ${css.active}`}>
+              <img className={css.color3} />
+            </div>
+            <div className={css.edit_elem}>
+              <img className={css.color4} />
+            </div>
+
           </div>
-          <div className={css.block }>
-              <div className={`${css.edit_elem} ${css.active}`}>
-                <img className={css.figure0}  />
-              </div>
+          <div className={css.block}>
+            <div className={`${css.edit_elem} ${css.active}`}>
+              <img className={css.figure0} />
+            </div>
           </div>
         </div>
         <div className={css.create}>

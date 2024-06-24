@@ -43,7 +43,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin:12px 0 20px 0;
+  margin: 12px 0 20px 0;
 }
 .border {
   width: 185px;
@@ -51,29 +51,29 @@
   position: absolute;
   top: 0;
   left: 0;
- content: url('@/assets/Clan_avatar_border.svg');
+  content: url('@/assets/Clan_avatar_border.svg');
 }
 .shape {
   width: 109px;
   height: 109px;
   z-index: 1001;
   position: absolute;
-  content: url('@/assets/creator/blue_shape.svg')
+  content: url('@/assets/creator/blue_shape.svg');
 }
-.figure{
+.figure {
   width: 84px;
   height: 82px;
   z-index: 1001;
-  content: url('@/assets/creator/figure0.svg')
+  content: url('@/assets/creator/figure0.svg');
 }
 .ellipse {
   width: 144px;
   height: 144px;
   position: absolute;
-  
+
   content: url('@/assets/Ellipse_9.svg');
 }
-.edit_block{
+.edit_block {
   width: 333px;
   height: 286px;
   background: linear-gradient(180deg, #31466d 0%, rgb(31, 47, 77) 100%);
@@ -83,7 +83,7 @@
   overflow-y: auto;
   margin-bottom: 30px;
 }
-.block{
+.block {
   width: 299px;
   height: 72px;
   border-radius: 23px;
@@ -92,9 +92,8 @@
   display: flex;
   justify-content: start;
   background: linear-gradient(180deg, #172846 0%, #14243d 100%);
-
 }
-.edit_elem{
+.edit_elem {
   width: 55px;
   height: 55px;
   border-radius: 23px;
@@ -102,70 +101,70 @@
   justify-content: center;
   align-items: center;
 }
-.edit_elem.active{
-  background-color: #2F405E;
+.edit_elem.active {
+  background-color: #2f405e;
 }
-.shape0{
+.shape0 {
   width: 42px;
   height: 37px;
-  content:url('@/assets/creator/shape0.svg')
+  content: url('@/assets/creator/shape0.svg');
 }
-.shape1{
+.shape1 {
   width: 42px;
   height: 37px;
-  content:url('@/assets/creator/shape1.svg')
+  content: url('@/assets/creator/shape1.svg');
 }
-.shape2{
+.shape2 {
   width: 42px;
   height: 37px;
-  content:url('@/assets/creator/shape2.svg')
+  content: url('@/assets/creator/shape2.svg');
 }
-.shape3{
+.shape3 {
   width: 42px;
   height: 37px;
-  content:url('@/assets/creator/shape3.svg')
+  content: url('@/assets/creator/shape3.svg');
 }
-.shape4{
+.shape4 {
   width: 42px;
   height: 37px;
-  content:url('@/assets/creator/shape4.svg')
+  content: url('@/assets/creator/shape4.svg');
 }
-.color0{
+.color0 {
   width: 42px;
   height: 37px;
-  content:url('@/assets/creator/color0.svg')
+  content: url('@/assets/creator/color0.svg');
 }
-.color1{
+.color1 {
   width: 42px;
   height: 37px;
-  content:url('@/assets/creator/color1.svg')
+  content: url('@/assets/creator/color1.svg');
 }
-.color2{
+.color2 {
   width: 42px;
   height: 37px;
-  content:url('@/assets/creator/color2.svg')
+  content: url('@/assets/creator/color2.svg');
 }
-.color3{
+.color3 {
   width: 42px;
   height: 37px;
-  content:url('@/assets/creator/color3.svg')
+  content: url('@/assets/creator/color3.svg');
 }
-.color4{
+.color4 {
   width: 42px;
   height: 37px;
-  content:url('@/assets/creator/color4.svg')
+  content: url('@/assets/creator/color4.svg');
 }
-.figure0{
+.figure0 {
   width: 42px;
   height: 37px;
-  content:url('@/assets/creator/figure0.svg')
+  content: url('@/assets/creator/figure0.svg');
 }
 
 .create {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, #1E72B9 0%, #253F7D 100%);
+  background: linear-gradient(180deg, #1e72b9 0%, #253f7d 100%);
   padding: 8px 0;
   border-radius: 23px;
   border: 3px solid #ffffff;
@@ -182,7 +181,7 @@
   padding: 2px 0;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, #1E72B9 0%, #253F7D 100%);
+  background: linear-gradient(180deg, #1e72b9 0%, #253f7d 100%);
   border-radius: 23px;
   border: 1px solid #ffffff;
   font-size: 11px;

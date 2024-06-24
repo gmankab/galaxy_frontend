@@ -6,7 +6,7 @@ export interface MemberProps {
   count: number;
 }
 
-export function Member({ count, name_id, logo }: MemberProps) {
+export function Member({ count, name_id }: MemberProps) {
   return (
     <div className={css.member}>
       <div className={css.lf_part}>
