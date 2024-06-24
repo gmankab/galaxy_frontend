@@ -9,10 +9,11 @@ export interface IRouteContext {
 }
 
 export const RouteContext = createContext<IRouteContext | null>(null);
-
 export const RouteProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [page, setPage] = useState<PageType>('main');
   const [active_clan_id, setActiveClanId] = useState<number>(0);
+  // eslint-disable-next-line react/no-unstable-context-value
+  const value = { page, setActiveClanId, setPage, active_clan_id };
 
-  return <RouteContext.Provider value={{ page, setActiveClanId, setPage, active_clan_id }}>{children}</RouteContext.Provider>;
+  return <RouteContext.Provider value={value}>{children}</RouteContext.Provider>;
 };
