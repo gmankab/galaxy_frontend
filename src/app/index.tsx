@@ -1,6 +1,8 @@
 import { TouchEvent, useCallback, useEffect, useRef, useState } from 'react';
 import '@/styles/index.css';
 import { ClansMenu } from './components/ClansMenu';
+import { SectorPicker } from "./components/SectorPicker";
+
 import { api } from '@/api';
 import { useToggle } from '@/hooks/useToggle';
 import {
@@ -89,6 +91,9 @@ export function App() {
 
   const orientation = useOrientation();
   const [horizontalMode, setHorizontalMode] = useState(false);
+
+  const [isSectorOpen, setIsSectorOpen] = useState(false);
+
 
   useEffect(() => {
     switch (orientation.type) {
@@ -226,7 +231,11 @@ export function App() {
         </>
       )}
       />
-      <Button variant='top' intent='shop' />
+      <Button
+          variant='top'
+          intent='shop'
+          onClick={() => setIsSectorOpen(true)}
+      />
       <Button variant='top' intent='gift' />
       <Button
         variant='top'
@@ -305,6 +314,7 @@ export function App() {
         test
       </div>
       {isClansMenuOpen && <ClansMenu onClose={() => setIsClansMenuOpen(false)} />}
+      {isSectorOpen && <SectorPicker onClose={() => setIsSectorOpen(false)} />}
     </>
   );
 };

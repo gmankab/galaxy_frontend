@@ -23,6 +23,8 @@ import clansWallImage from './clan_wall.svg';
 import bottomMenuImage from './bottom_menu.svg';
 import mapButtonImage from './buttons/map_button.svg';
 import clanSearchImage from './clan_search.svg';
+import sectors_map from './sectors_map.svg';
+
 
 export {
   planetImageGreen,
@@ -50,4 +52,5 @@ export {
   bottomMenuImage,
   mapButtonImage,
   clanSearchImage,
+  sectors_map
 };

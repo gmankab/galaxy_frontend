@@ -325,3 +325,31 @@
   font-size: 16px; /* Размер шрифта */
   border-radius: 5px; /* Сглаживание углов */
 }
+
+.sector-picker{
+  width: 100%;
+  height: 100%;
+  background-color: #141F33;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 1002;
+}
+
+.sector-picker-container{
+  margin-top: 40px;
+  gap: 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.sector-picker-container object{
+  width: 100%;
+}
