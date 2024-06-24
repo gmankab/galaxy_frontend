@@ -5,7 +5,7 @@ import React from '@vitejs/plugin-react-swc';
 import { optimizeCssModules as OptimizeCssModules } from 'vite-plugin-optimize-css-modules';
 
 export default defineConfig({
-  // base: '/galaxy_frontend/',
+  base: '/galaxy_frontend/',
   build: {
     sourcemap: true,
     target: 'esnext',
