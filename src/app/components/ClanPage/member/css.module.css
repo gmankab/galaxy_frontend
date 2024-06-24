@@ -19,3 +19,8 @@
 .count {
   font-size: 11px;
 }
+.user_logo{
+  width: 37px;
+  height: 37px;
+  background-image: url('@/assets/logo_skeleton.svg');
+}
