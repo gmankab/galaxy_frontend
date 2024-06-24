@@ -3,10 +3,8 @@ import { clanSearchImage, clansMenuImage, clansWallImage } from '@/assets/images
 import { BottomMenu } from '@/components/BottomMenu';
 import { IRouteContext, RouteContext } from '@/context/routeContext';
 
-
-
 export function ClansMenu() {
-  const {setPage} = useContext(RouteContext) as IRouteContext
+  const { setPage } = useContext(RouteContext) as IRouteContext;
   const [searchText, setSearchText] = useState('');
 
   return (
@@ -23,7 +21,7 @@ export function ClansMenu() {
         <img src={clansMenuImage} alt='Clans Menu' className='clans-menu-image' />
       </div>
       <div className='clans-wall' style={{ backgroundImage: `url("${clansWallImage}")` }}></div>
-      <BottomMenu onMapButtonClick={()=>setPage('main')} />
+      <BottomMenu onMapButtonClick={() => setPage('main')} />
     </div>
   );
 };

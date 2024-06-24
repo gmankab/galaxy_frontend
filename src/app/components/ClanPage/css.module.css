@@ -40,14 +40,19 @@
   position: absolute;
   top: 0;
   left: 0;
+  background-image: url('@/assets/Clan_avatar_border.svg');
 }
 .form {
   width: 59px;
   height: 51px;
   z-index: 1004;
+  background-image: url('@/assets/Clan_avatar_form.svg');
 }
 .ellipse {
+  width: 77px;
+  height: 77px;
   position: absolute;
+  background-image: url('@/assets/Ellipse_9.svg');
 }
 .profile {
   display: flex;
@@ -70,12 +75,13 @@
   width: 35px;
   height: 35px;
   margin-left: 9px;
+  background-image: url('@/assets/Clan_avatar.svg');
 }
+
 .members {
   margin-top: 17px;
   width: 343px;
   height: 451px;
-  /* background: rgb(79,120,197); */
   background: linear-gradient(180deg, #31466d 0%, rgb(31, 47, 77) 100%);
   border-radius: 23px;
   padding: 12px;
@@ -87,7 +93,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(180deg, #2960c7 0%, rgb(38, 59, 99) 100%);
+  background: linear-gradient(180deg, #31466d 0%, rgb(31, 47, 77) 100%);
   padding: 11px 17px;
   border-radius: 23px;
   border: 3px solid #ffffff;
@@ -100,12 +106,13 @@
 .invite_img {
   width: 27px;
   height: 25px;
+  background-image: url('@/assets/invite_frined.svg');
 }
 .leave {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, #2960c7 0%, rgb(38, 59, 99) 100%);
+  background: linear-gradient(180deg, #31466d 0%, rgb(31, 47, 77) 100%);
   border-radius: 19px;
   border: 1px solid #ffffff;
   width: 111px;

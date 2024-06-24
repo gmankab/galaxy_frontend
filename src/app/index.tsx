@@ -1,6 +1,6 @@
 import { TouchEvent, useCallback, useContext, useEffect, useRef, useState } from 'react';
 import '@/styles/index.css';
-import { ClansMenu } from './components/ClansMenu';
+import { ClanPage } from './components/ClanPage';
 import { api } from '@/api';
 import { useToggle } from '@/hooks/useToggle';
 import {
@@ -19,7 +19,6 @@ import { useOrientation } from '@/hooks/useOrientation';
 import { OrientationWarning } from '@/components/OrientationWarning';
 import { Menu } from '@/components/Menu';
 import { Button } from '@/components/Button';
-import ClanPage from './components/ClanPage';
 import { IRouteContext, RouteContext } from '@/context/routeContext';
 
 function getFromLocalStorage<T>(key: string): T {
@@ -77,7 +76,7 @@ function saveCachedCoins(userId: number) {
 };
 
 export function App() {
-  const {page,setPage} = useContext(RouteContext) as IRouteContext
+  const { page, setPage } = useContext(RouteContext) as IRouteContext;
   const [planetImage, setPlanetImage] = useState(planetImageGreen);
   const [count, setCount] = useState(0);
   const [planethp, setPlanetHp] = useState(50);
@@ -306,8 +305,8 @@ export function App() {
       >
         test
       </div>
-      {page==='clan'&&<ClanPage/>}
-      {page === 'clans'&&<ClansMenu  />}
+      {page === 'clans' && <ClanPage />}
+      {/* {page === 'clans'&&<ClansMenu  />} */}
       {/* <Menu/> */}
     </>
   );
