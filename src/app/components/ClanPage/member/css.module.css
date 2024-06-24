@@ -1,7 +1,7 @@
 .member {
   border-radius: 19px;
   padding: 11px 46px 11px 20px;
-  width: calc(100%-24px);
+  width: calc(100% - 24px);
   background-color: #3b5b96;
   display: flex;
   justify-content: space-between;
@@ -19,7 +19,7 @@
 .count {
   font-size: 11px;
 }
-.user_logo{
+.user_logo {
   width: 37px;
   height: 37px;
   background-image: url('@/assets/logo_skeleton.svg');
