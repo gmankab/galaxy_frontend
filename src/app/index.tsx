@@ -1,6 +1,8 @@
 import { TouchEvent, useCallback, useContext, useEffect, useRef, useState } from 'react';
 import '@/styles/index.css';
 import { ClanPage } from './components/ClanPage';
+import { ClansMenu } from './components/ClansMenu';
+import { ClanCreate } from './components/ClanCreate';
 import { api } from '@/api';
 import { useToggle } from '@/hooks/useToggle';
 import {
@@ -305,8 +307,9 @@ export function App() {
       >
         test
       </div>
-      {page === 'clans' && <ClanPage />}
-      {/* {page === 'clans'&&<ClansMenu  />} */}
+      {page === 'clan' && <ClanPage />}
+      {page === 'clans' && <ClansMenu />}
+      {page === 'clan_create' && <ClanCreate />}
       {/* <Menu/> */}
     </>
   );

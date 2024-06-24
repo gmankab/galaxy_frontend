@@ -10,7 +10,7 @@ export function Member({ count, name_id, logo }: MemberProps) {
   return (
     <div className={css.member}>
       <div className={css.lf_part}>
-        <div className={css.user_logo} ></div>
+        <div className={css.user_logo}></div>
         <p className={css.name_id}>{name_id}</p>
       </div>
       <div className={css.rt_part}>
