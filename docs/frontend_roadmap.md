@@ -50,8 +50,8 @@
 - [ ] main screen new design
 - [ ] each button tap and planet tab should vibrate
 - [ ] automining
-- [x] clans: create | 2h
-- [ ] clans: player rank number
+- [x] 6357a3d7 clans: create | 4h
+- [x] 7d07f528 clans: player rank number | 2h
 - [ ] clans: moderation
 - [ ] clans: inviting members
 - [ ] clans: removing members
