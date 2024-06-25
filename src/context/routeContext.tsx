@@ -17,7 +17,7 @@ export interface RouteProviderProps {
 }
 
 export function RouteProvider({ children }: RouteProviderProps) {
-  const [page, setPage] = useState<PageType>('personalization');
+  const [page, setPage] = useState<PageType>('main');
   const [activeClanId, setActiveClanId] = useState(0);
   const value = useMemo(
     () => { return { page, setActiveClanId, setPage, activeClanId }; },
