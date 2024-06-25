@@ -8,17 +8,21 @@
   align-items: center;
   margin-bottom: 8px;
 }
+
 .lf_part {
   display: flex;
   align-items: center;
 }
+
 .name_id {
   margin-left: 16px;
   font-size: 14px;
 }
+
 .count {
   font-size: 11px;
 }
+
 .user_logo {
   width: 37px;
   height: 37px;

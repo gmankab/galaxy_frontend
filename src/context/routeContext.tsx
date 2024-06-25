@@ -1,19 +1,32 @@
-import { FC, ReactNode, createContext, useState } from 'react';
+import * as React from 'react';
+import { ReactNode, createContext, useMemo, useState } from 'react';
 
 export type PageType = 'main' | 'shop' | 'rang' | 'bonus' | 'clans' | 'clan' | 'clan_create' | 'clan_search' | 'sector';
-export interface IRouteContext {
+
+export interface RouteContext {
   page: PageType;
   setPage: React.Dispatch<React.SetStateAction<PageType>>;
-  active_clan_id: number; // 0 или id клана
+  activeClanId: number; // 0 или id клана
   setActiveClanId: React.Dispatch<React.SetStateAction<number>>;
 }
 
-export const RouteContext = createContext<IRouteContext | null>(null);
-export const RouteProvider: FC<{ children: ReactNode }> = ({ children }) => {
-  const [page, setPage] = useState<PageType>('main');
-  const [active_clan_id, setActiveClanId] = useState<number>(0);
-  // eslint-disable-next-line react/no-unstable-context-value
-  const value = { page, setActiveClanId, setPage, active_clan_id };
+export const RouteProviderContext = createContext<RouteContext | null>(null);
 
-  return <RouteContext.Provider value={value}>{children}</RouteContext.Provider>;
+export interface RouteProviderProps {
+  children: ReactNode;
+}
+
+export function RouteProvider({ children }: RouteProviderProps) {
+  const [page, setPage] = useState<PageType>('main');
+  const [activeClanId, setActiveClanId] = useState(0);
+  const value = useMemo(
+    () => { return { page, setActiveClanId, setPage, activeClanId }; },
+    [page, activeClanId],
+  );
+
+  return (
+    <RouteProviderContext.Provider value={value}>
+      {children}
+    </RouteProviderContext.Provider>
+  );
 };

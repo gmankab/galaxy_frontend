@@ -24,3 +24,9 @@ dist-ssr
 *.sw?
 
 *storybook.log
+
+# Misc
+*.module.css.d.ts
+yarn.lock
+package-lock.json
+npm-shrinkwrap.json

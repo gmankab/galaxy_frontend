@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import css from './css.module.css';
+
+import css from './styles.module.css';
 
 // export interface UserDataType{
-//   color:0|1|2|3|4
-//   shape:0|1|2|3|4
-//   figure:0
-
+//   color: 0 | 1| 2 | 3 | 4
+//   shape: 0 | 1 | 2 | 3 | 4
+//   figure: 0
 // }
 
 // const default_user_data:UserDataType={
@@ -13,33 +13,33 @@ import css from './css.module.css';
 //   figure:0,
 //   shape:0
 // }
-// const colors:string[]= [
+// const colors: string[] = [
 //   '#FF5050',
 //   '#FFCE50',
 //   '#50FFC0',
 //   '#5081FF',
 //   '#FF50CE',
-
 // ]
 
 export function ClanCreate() {
-  const [clan_name, setClanName] = useState('');
+  const [clanName, setClanName] = useState('');
   // const [user_data, setUserData]=useState<UserDataType>(default_user_data)
+
   return (
     <div className={css.wrapper}>
       <div className={css.page}>
         <h2 className={css.name}>CLAN CREATOR</h2>
-        <span style={{
-          fontSize: '13px',
-        }}
-        >
+        <span className={css.label}>
           Choose name:
         </span>
-        <input type='text' className={css.enter_name} value={clan_name}onChange={e => setClanName(e.target.value)} placeholder='Click here to name your clan' />
-        <span style={{
-          fontSize: '13px',
-        }}
-        >
+        <input
+          type='text'
+          className={css.enterName}
+          value={clanName}
+          onChange={e => setClanName(e.target.value)}
+          placeholder='Click here to name your clan'
+        />
+        <span className={css.label}>
           Create logo:
         </span>
         <div className={css.avatar}>
@@ -48,44 +48,43 @@ export function ClanCreate() {
           <img className={css.shape} />
           <img className={css.figure} />
         </div>
-        <div className={css.edit_block}>
+        <div className={css.editBlock}>
           <div className={css.block}>
-            <div className={`${css.edit_elem} ${css.active}`}>
+            <div className={`${css.editElem} ${css.active}`}>
               <img className={css.shape0} />
             </div>
-            <div className={css.edit_elem}>
+            <div className={css.editElem}>
               <img className={css.shape1} />
             </div>
-            <div className={css.edit_elem}>
+            <div className={css.editElem}>
               <img className={css.shape2} />
             </div>
-            <div className={css.edit_elem}>
+            <div className={css.editElem}>
               <img className={css.shape3} />
             </div>
-            <div className={css.edit_elem}>
+            <div className={css.editElem}>
               <img className={css.shape4} />
             </div>
           </div>
           <div className={css.block}>
-            <div className={css.edit_elem}>
+            <div className={css.editElem}>
               <img className={css.color0} />
             </div>
-            <div className={css.edit_elem}>
+            <div className={css.editElem}>
               <img className={css.color1} />
             </div>
-            <div className={css.edit_elem}>
+            <div className={css.editElem}>
               <img className={css.color2} />
             </div>
-            <div className={`${css.edit_elem} ${css.active}`}>
+            <div className={`${css.editElem} ${css.active}`}>
               <img className={css.color3} />
             </div>
-            <div className={css.edit_elem}>
+            <div className={css.editElem}>
               <img className={css.color4} />
             </div>
-
           </div>
           <div className={css.block}>
-            <div className={`${css.edit_elem} ${css.active}`}>
+            <div className={`${css.editElem} ${css.active}`}>
               <img className={css.figure0} />
             </div>
           </div>
@@ -97,7 +96,6 @@ export function ClanCreate() {
           Cancel
         </div>
       </div>
-
     </div>
   );
 }

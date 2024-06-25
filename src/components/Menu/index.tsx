@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+import { clsx } from 'clsx';
 import css from './styles.module.css';
 import { useToggle } from '@/hooks/useToggle';
 import { Button } from '@/components/Button';
@@ -18,7 +19,7 @@ export function Menu({ content }: MenuProps) {
         onClick={toggle}
         state={open}
       />
-      <div className={`${css.base} ${open ? css.on : css.off}`}>
+      <div className={clsx([css.base, open || css.off])}>
         <img className={css.bg} />
         {content}
       </div>

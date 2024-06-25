@@ -22,12 +22,9 @@ jobs:
       - name: Install packages
         run: |
           pnpm install --frozen-lockfile
-      - name: Lint
+      - name: Lint and Build
         run: |
-          pnpm run lint
-      - name: Build
-        run: |
-          pnpm run build
+          pnpm run ci
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:

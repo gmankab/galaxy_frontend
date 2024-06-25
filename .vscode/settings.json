@@ -56,6 +56,5 @@
     ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
 
-  // Our CSS Modules Support
-  "cssModules.camelCase": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
 }

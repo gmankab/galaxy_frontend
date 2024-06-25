@@ -16,6 +16,7 @@
     "typeRoots": [
       "./node_modules/telegram-webapps"
     ],
+
     "allowImportingTsExtensions": true,
 
     /* Linting */
@@ -25,7 +26,18 @@
     "noUnusedParameters": true,
     "noEmit": true,
     "isolatedModules": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "goToDefinition": true,
+          "classnameTransform": "camelCaseOnly",
+          "namedExports": false
+        }
+      }
+    ]
   },
   "references": [{ "path": "./tsconfig.node.json" }],
   "include": ["src"]

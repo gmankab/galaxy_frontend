@@ -15,6 +15,7 @@ export default antfu({
     'package.json',
     'pnpm-lock.yaml',
     '.vscode/**/*.json',
+    'src/**/*.module.css.d.ts',
   ],
 }, {
   rules: {

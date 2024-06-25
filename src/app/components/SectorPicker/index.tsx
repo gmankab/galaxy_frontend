@@ -1,10 +1,11 @@
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import { BottomMenu } from '@/components/BottomMenu';
 import { sectors_map } from '@/assets/images';
-import { IRouteContext, RouteContext } from '@/context/routeContext';
+import { useRouteProvider } from '@/hooks/useRouteProvider';
 
 export function SectorPicker() {
-  const { setPage } = useContext(RouteContext) as IRouteContext;
+  const { setPage } = useRouteProvider();
+
   useEffect(() => {
     const svgObject = document.getElementById('sectors-svg') as HTMLObjectElement;
 

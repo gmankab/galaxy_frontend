@@ -1,7 +1,7 @@
 import { useState } from 'react';
+import { Clan } from './components/Clan';
 
-import css from './css.module.css';
-import { Clan } from './clan';
+import css from './styles.module.css';
 
 export function ClanSearch() {
   const [searchText, setSearchText] = useState('');
@@ -22,7 +22,7 @@ export function ClanSearch() {
             placeholder='Search'
           />
         </div>
-        <div className={css.clanBox}>
+        <div className={/* TODO css.clanBox */ ''}>
           <p className={css.clanTitle}>Top clans:</p>
           <div className={css.clanList}>
             <Clan title='Clan_id' />

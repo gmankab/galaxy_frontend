@@ -7,13 +7,9 @@ import { RouteProvider } from './context/routeContext.tsx';
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 
 root.render(
-
-  <RouteProvider>
-
-    <React.StrictMode>
+  <React.StrictMode>
+    <RouteProvider>
       <App />
-    </React.StrictMode>
-    ,
-  </RouteProvider>,
-
+    </RouteProvider>
+  </React.StrictMode>,
 );

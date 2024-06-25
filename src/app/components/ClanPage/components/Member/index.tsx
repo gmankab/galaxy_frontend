@@ -1,4 +1,4 @@
-import css from './css.module.css';
+import css from './styles.module.css';
 
 export interface MemberProps {
   name_id: string;
@@ -9,11 +9,11 @@ export interface MemberProps {
 export function Member({ count, name_id }: MemberProps) {
   return (
     <div className={css.member}>
-      <div className={css.lf_part}>
-        <div className={css.user_logo}></div>
-        <p className={css.name_id}>{name_id}</p>
+      <div className={css.lfPart}>
+        <div className={css.userLogo}></div>
+        <p className={css.nameId}>{name_id}</p>
       </div>
-      <div className={css.rt_part}>
+      <div>
         <p className={css.count}>{count}</p>
       </div>
     </div>
