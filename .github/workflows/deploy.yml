@@ -19,8 +19,6 @@ jobs:
         with:
           node-version: latest
           cache: pnpm
-      - name: Enable NodeJS corepack
-        run: corepack enable
       - name: Install packages
         run: |
           pnpm install --frozen-lockfile
