@@ -1,0 +1,33 @@
+.clan {
+  border-radius: 19px;
+  padding: 11px 20px;
+  background-color: #3b5b96;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.lf_part {
+  display: flex;
+  align-items: center;
+}
+
+.name_id {
+  margin-left: 16px;
+  font-size: 14px;
+}
+
+.plusBtn {
+  background: linear-gradient(
+    180deg,
+    rgba(32, 115, 186, 1) 0%,
+    rgba(38, 65, 128, 1) 100%
+  );
+  height: 34px;
+  width: 34px;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 25px;
+  color: white;
+}

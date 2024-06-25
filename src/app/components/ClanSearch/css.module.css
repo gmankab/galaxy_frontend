@@ -1,0 +1,81 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1002;
+  overflow-y: auto;
+}
+
+.page {
+  width: 100%;
+  background-color: #141f33;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-top: 40px;
+  flex-direction: column;
+}
+
+.pageTitle {
+  font-size: 23px;
+}
+
+.inputBox {
+  margin-top: 15px;
+}
+
+.inputTitle {
+  font-size: 20px;
+}
+
+.inputSearch {
+  position: relative;
+  margin-top: 12px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 15px 20px;
+  border: 4px solid #293a56;
+  border-radius: 40px;
+  width: 300px;
+}
+
+/* .inputSearch::after {
+  Иконку лупы подключить
+} */
+
+.clanTitle {
+  padding: 8px 0px;
+}
+
+.clanList {
+  width: 343px;
+  height: 451px;
+  background: linear-gradient(180deg, #31466d 0%, rgb(31, 47, 77) 100%);
+  border-radius: 23px;
+  padding: 12px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.clanCreate p {
+  padding: 15px 0px;
+  font-weight: bold;
+}
+
+.createBtn {
+  background: linear-gradient(
+    90deg,
+    rgba(30, 114, 185, 1) 0%,
+    rgba(37, 63, 125, 1) 100%
+  );
+  border-radius: 23px;
+  border: 3px solid #ffffff;
+  padding: 8px 50px;
+  margin-bottom: 13px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
