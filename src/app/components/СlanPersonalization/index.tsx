@@ -1,47 +1,10 @@
-import { useState } from 'react';
-
 import css from './styles.module.css';
 
-// export interface UserDataType{
-//   color: 0 | 1| 2 | 3 | 4
-//   shape: 0 | 1 | 2 | 3 | 4
-//   figure: 0
-// }
-
-// const default_user_data:UserDataType={
-//   color:0,
-//   figure:0,
-//   shape:0
-// }
-// const colors: string[] = [
-//   '#FF5050',
-//   '#FFCE50',
-//   '#50FFC0',
-//   '#5081FF',
-//   '#FF50CE',
-// ]
-
-export function ClanCreate() {
-  const [clanName, setClanName] = useState('');
-  // const [user_data, setUserData]=useState<UserDataType>(default_user_data)
-
+export function ClanPersonalization() {
   return (
     <div className={css.wrapper}>
       <div className={css.page}>
-        <h2 className={css.name}>CLAN CREATOR</h2>
-        <span className={css.label}>
-          Choose name:
-        </span>
-        <input
-          type='text'
-          className={css.enterName}
-          value={clanName}
-          onChange={e => setClanName(e.target.value)}
-          placeholder='Click here to name your clan'
-        />
-        <span className={css.label}>
-          Create logo:
-        </span>
+        <h2 className={css.name}>PERSONALIZATION</h2>
         <div className={css.avatar}>
           <img className={css.border} />
           <img className={css.ellipse} />
@@ -89,8 +52,8 @@ export function ClanCreate() {
             </div>
           </div>
         </div>
-        <div className={css.create}>
-          Create clan
+        <div className={css.save}>
+          Save changes
         </div>
         <div className={css.cancel}>
           cancel

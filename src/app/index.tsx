@@ -4,6 +4,7 @@ import { ClanPage } from './components/ClanPage';
 import { ClanCreate } from './components/ClanCreate';
 import { SectorPicker } from './components/SectorPicker';
 import { ClanSearch } from './components/ClanSearch';
+import { ClanPersonalization } from './components/СlanPersonalization';
 import { api } from '@/api';
 import { useToggle } from '@/hooks/useToggle';
 import {
@@ -312,6 +313,7 @@ export function App() {
       {page === 'clans' && <ClanSearch />}
       {page === 'clan_create' && <ClanCreate />}
       {page === 'sector' && <SectorPicker />}
+      {page === 'personalization' && <ClanPersonalization />}
     </>
   );
 };

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ReactNode, createContext, useMemo, useState } from 'react';
 
-export type PageType = 'main' | 'shop' | 'rang' | 'bonus' | 'clans' | 'clan' | 'clan_create' | 'clan_search' | 'sector';
+export type PageType = 'main' | 'shop' | 'rang' | 'bonus' | 'clans' | 'clan' | 'clan_create' | 'clan_search' | 'sector' | 'personalization';
 
 export interface RouteContext {
   page: PageType;
@@ -17,7 +17,7 @@ export interface RouteProviderProps {
 }
 
 export function RouteProvider({ children }: RouteProviderProps) {
-  const [page, setPage] = useState<PageType>('main');
+  const [page, setPage] = useState<PageType>('personalization');
   const [activeClanId, setActiveClanId] = useState(0);
   const value = useMemo(
     () => { return { page, setActiveClanId, setPage, activeClanId }; },
